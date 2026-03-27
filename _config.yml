@@ -1,0 +1,9 @@
+title: Moss
+description: Agent harness for Go
+theme: minima
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-feed
+
