@@ -3,139 +3,136 @@ layout: default
 title: Moss
 ---
 
-<p class="hero-logo">
-  <img src="https://avatars.githubusercontent.com/u/268767877" alt="Moss logo" width="96" height="96">
-</p>
+<section class="hero section">
+  <div class="hero-top">
+    <a class="brand" href="/">
+      <img src="https://avatars.githubusercontent.com/u/268767877" alt="Moss logo" width="96" height="96">
+      <span>Moss</span>
+    </a>
+    <nav class="top-nav" aria-label="Primary">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#use-cases">Use Cases</a>
+      <a href="#quickstart">Quickstart</a>
+      <a href="#docs">Docs</a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Language switch">
+      <button type="button" data-lang-switch="en" aria-pressed="false">EN</button>
+      <button type="button" data-lang-switch="zh" aria-pressed="false">中文</button>
+    </div>
+  </div>
 
-# Moss
+  <h1 data-lang="en">Agent harness for Go: compose fast, run safely.</h1>
+  <h1 data-lang="zh">面向 Go 的 Agent Harness：快速装配，安全运行。</h1>
 
-**Agent harness for Go: compose fast, run safely.**  
-**面向 Go 的 Agent Harness：快速装配，安全运行。**
+  <p class="lead" data-lang="en">
+    Build production-ready AI agent workflows with a batteries-included runtime, policy controls, and extension-first architecture.
+  </p>
+  <p class="lead" data-lang="zh">
+    用开箱即用的运行时、策略控制与扩展优先架构，构建可落地的 AI Agent 工作流。
+  </p>
 
-Moss gives you a ready-to-run agent stack (CLI + runtime + extension surface) while keeping the core composable and library-first.  
-Moss 提供可直接运行的智能体栈（CLI + Runtime + 扩展面），同时保持核心可组合、可嵌入（library-first）。
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://github.com/mossagents/moss">Explore on GitHub</a>
+    <a class="btn btn-secondary" href="https://github.com/mossagents/moss/tree/main/docs">Read Docs</a>
+  </div>
+</section>
 
-> **MossCode**: *A coding-agent harness grounded in your workspace.*  
-> **MossCode**：*扎根于你的工作区上下文的代码 Agent Harness。*
+<section class="trust-bar section">
+  <div class="trust-item">Open Source</div>
+  <div class="trust-item">Go-native</div>
+  <div class="trust-item">Extensible</div>
+</section>
 
----
+<section id="capabilities" class="section">
+  <h2 data-lang="en">Capabilities</h2>
+  <h2 data-lang="zh">能力矩阵</h2>
+  <div class="grid grid-3">
+    <article class="card">
+      <h3>Planning</h3>
+      <p data-lang="en">Task breakdown and progress-oriented agent workflows.</p>
+      <p data-lang="zh">支持任务拆分与进度驱动的 Agent 工作流。</p>
+    </article>
+    <article class="card">
+      <h3>Filesystem + Exec</h3>
+      <p data-lang="en">Structured file operations and command execution.</p>
+      <p data-lang="zh">提供结构化文件操作与命令执行能力。</p>
+    </article>
+    <article class="card">
+      <h3>Sub-agents</h3>
+      <p data-lang="en">Delegate scoped tasks to specialized agents.</p>
+      <p data-lang="zh">将子任务委派给专用代理并隔离上下文。</p>
+    </article>
+    <article class="card">
+      <h3>Policy + Sandbox</h3>
+      <p data-lang="en">Control risk with trust levels and policy gates.</p>
+      <p data-lang="zh">通过信任等级与策略门控控制执行风险。</p>
+    </article>
+    <article class="card">
+      <h3>TUI + Headless</h3>
+      <p data-lang="en">Run interactively or in script-friendly mode.</p>
+      <p data-lang="zh">既可交互运行，也可脚本化无头执行。</p>
+    </article>
+    <article class="card">
+      <h3>Extension APIs</h3>
+      <p data-lang="en">Compose with middleware, tools, skills, and adapters.</p>
+      <p data-lang="zh">通过中间件、工具、技能与适配器自由扩展。</p>
+    </article>
+  </div>
+</section>
 
-## What is included / 开箱包含
+<section id="use-cases" class="section">
+  <h2 data-lang="en">Use Cases</h2>
+  <h2 data-lang="zh">适用场景</h2>
+  <div class="grid grid-3">
+    <article class="card">
+      <h3 data-lang="en">For Builders</h3>
+      <h3 data-lang="zh">面向开发者</h3>
+      <p data-lang="en">Ship fast with a ready-to-run agent stack and minimal setup.</p>
+      <p data-lang="zh">以最小配置快速启动并交付可用 Agent。</p>
+    </article>
+    <article class="card">
+      <h3 data-lang="en">For Leads</h3>
+      <h3 data-lang="zh">面向技术负责人</h3>
+      <p data-lang="en">Adopt clear runtime boundaries and maintainable extension points.</p>
+      <p data-lang="zh">通过清晰运行时边界与扩展点提升可维护性。</p>
+    </article>
+    <article class="card">
+      <h3 data-lang="en">For Teams</h3>
+      <h3 data-lang="zh">面向企业团队</h3>
+      <p data-lang="en">Use policy controls and sandboxing for safer engineering workflows.</p>
+      <p data-lang="zh">借助策略控制和沙箱机制建立更安全流程。</p>
+    </article>
+  </div>
+</section>
 
-- Planning and task tracking capabilities  
-  任务规划与进度追踪能力
-- Filesystem and command execution with trust-level controls  
-  带信任级别控制的文件与命令执行
-- Sub-agent delegation patterns for multi-agent workflows  
-  面向多代理工作流的子代理委派模式
-- Interactive TUI and headless run mode  
-  交互式 TUI 与非交互执行模式
-- Extension-friendly architecture  
-  易扩展的运行时架构
-
----
-
-## Quickstart / 快速开始
-
-```bash
-go install github.com/mossagents/moss/cmd/moss@latest
-```
-
-```bash
-# Interactive TUI
+<section id="quickstart" class="section">
+  <h2>Quickstart</h2>
+  <pre><code>go install github.com/mossagents/moss/cmd/moss@latest
 moss
+moss run --goal "Fix the bug in main.go" --workspace .</code></pre>
+  <p data-lang="en">Need integration details? Start from the docs entrypoint.</p>
+  <p data-lang="zh">需要集成细节？从文档入口继续。</p>
+</section>
 
-# Non-interactive run
-moss run --goal "Fix the bug in main.go" --workspace .
+<section id="docs" class="section">
+  <h2>Docs & Examples</h2>
+  <ul class="link-list">
+    <li><a href="https://github.com/mossagents/moss/tree/main/docs">Documentation</a></li>
+    <li><a href="https://github.com/mossagents/moss/blob/main/README.md">Repository README</a></li>
+    <li><a href="https://github.com/mossagents/moss/tree/main/examples/mosscode">Example: mosscode</a></li>
+    <li><a href="https://github.com/mossagents/moss/tree/main/examples/mosswork">Example: mosswork</a></li>
+  </ul>
+</section>
 
-# Version
-moss version
-```
+<section class="final-cta section">
+  <h2 data-lang="en">Build your AI agent product on a reliable harness.</h2>
+  <h2 data-lang="zh">在可靠的 Agent Harness 上构建你的 AI 产品。</h2>
+  <a class="btn btn-primary" href="https://github.com/mossagents/moss">Explore on GitHub</a>
+</section>
 
----
+<aside class="mobile-cta" data-mobile-cta hidden>
+  <a class="btn btn-primary" href="https://github.com/mossagents/moss">Explore on GitHub</a>
+  <button type="button" class="mobile-cta-dismiss" data-mobile-cta-dismiss aria-label="Dismiss">x</button>
+</aside>
 
-## Build with Go / Go 库集成
-
-```go
-package main
-
-import (
-	"context"
-	"os"
-
-	"github.com/mossagents/moss/appkit"
-	"github.com/mossagents/moss/kernel/port"
-	"github.com/mossagents/moss/kernel/session"
-)
-
-func main() {
-	ctx := context.Background()
-	k, err := appkit.BuildKernel(ctx, &appkit.AppFlags{
-		Provider:  "openai",
-		Model:     "gpt-4o",
-		Workspace: ".",
-		APIKey:    os.Getenv("OPENAI_API_KEY"),
-	}, port.NewConsoleIO())
-	if err != nil {
-		panic(err)
-	}
-
-	if err := k.Boot(ctx); err != nil {
-		panic(err)
-	}
-	defer k.Shutdown(ctx)
-
-	sess, err := k.NewSession(ctx, session.SessionConfig{
-		Goal:     "Fix the bug in main.go",
-		MaxSteps: 50,
-	})
-	if err != nil {
-		panic(err)
-	}
-	sess.AppendMessage(port.Message{Role: port.RoleUser, Content: "Fix the bug in main.go"})
-
-	if _, err := k.Run(ctx, sess); err != nil {
-		panic(err)
-	}
-}
-```
-
----
-
-## Architecture / 架构
-
-- `kernel/`: runtime primitives (loop, tool, session, middleware, port)  
-  `kernel/`：运行时原语（loop、tool、session、middleware、port）
-- `appkit/`: high-level assembly helpers  
-  `appkit/`：高层装配工具
-- `agent/`, `skill/`, `bootstrap/`, `knowledge/`, `scheduler/`, `gateway/`: feature/support packages  
-  `agent/`、`skill/`、`bootstrap/`、`knowledge/`、`scheduler/`、`gateway/`：功能与支撑包
-- `cmd/moss/`: terminal CLI + TUI  
-  `cmd/moss/`：终端 CLI 与 TUI 入口
-
----
-
-## Documentation / 文档
-
-- [Repository / 仓库](https://github.com/mossagents/moss)
-- [README](https://github.com/mossagents/moss/blob/main/README.md)
-- [Getting Started / 快速开始](https://github.com/mossagents/moss/blob/main/docs/getting-started.md)
-- [Architecture / 架构设计](https://github.com/mossagents/moss/blob/main/docs/architecture.md)
-- [Skills / 技能系统](https://github.com/mossagents/moss/blob/main/docs/skills.md)
-
----
-
-## Examples / 示例
-
-- [mosscode](https://github.com/mossagents/moss/tree/main/examples/mosscode)
-- [mosswork](https://github.com/mossagents/moss/tree/main/examples/mosswork)
-- [mossclaw](https://github.com/mossagents/moss/tree/main/examples/mossclaw)
-- [mossquant](https://github.com/mossagents/moss/tree/main/examples/mossquant)
-- [mossroom](https://github.com/mossagents/moss/tree/main/examples/mossroom)
-
----
-
-## License
-
-MIT
-
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>
