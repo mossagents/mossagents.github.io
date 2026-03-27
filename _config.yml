@@ -1,5 +1,6 @@
 title: Moss
 description: Agent harness for Go
+logo: https://avatars.githubusercontent.com/u/268767877
 theme: minima
 markdown: kramdown
 kramdown:

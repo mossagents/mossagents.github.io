@@ -47,6 +47,19 @@ a:hover {
   max-width: 860px;
 }
 
+.hero-logo {
+  margin: 0.25rem 0 0.75rem;
+}
+
+.hero-logo img {
+  display: block;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: #fff;
+}
+
 h1,
 h2,
 h3 {

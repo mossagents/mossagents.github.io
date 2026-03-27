@@ -3,6 +3,10 @@ layout: default
 title: Moss
 ---
 
+<p class="hero-logo">
+  <img src="https://avatars.githubusercontent.com/u/268767877" alt="Moss logo" width="96" height="96">
+</p>
+
 # Moss
 
 **Agent harness for Go: compose fast, run safely.**  
