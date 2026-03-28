@@ -36,9 +36,15 @@ body {
 }
 
 .site-header {
-  border-top: 0;
-  border-bottom: 1px solid var(--neutral-200);
-  background: #fff;
+  display: none;
+}
+
+.site-footer {
+  display: none;
+}
+
+.page-content {
+  padding: 0;
 }
 
 .site-title,
