@@ -1,8 +1,18 @@
 ---
-layout: default
+layout: null
 title: Moss
 ---
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moss | Agent harness for Go</title>
+  {% seo %}
+  {% include custom-head.html %}
+</head>
+<body>
 <section class="hero section">
   <div class="hero-top">
     <a class="brand" href="/">
@@ -136,3 +146,5 @@ moss run --goal "Fix the bug in main.go" --workspace .</code></pre>
 </aside>
 
 <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
+</html>
