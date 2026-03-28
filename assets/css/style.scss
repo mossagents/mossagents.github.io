@@ -210,24 +210,37 @@ h1 {
   grid-row: 2 / span 8;
   border: 1px solid var(--line);
   border-radius: var(--r-md);
-  background: #fafcfa;
+  background: #0f1715;
   padding: var(--s-3);
 }
 
-.hero-panel h3 {
-  margin-bottom: 12px;
-  font-size: 19px;
+.panel-label {
+  margin: 0 0 14px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #9eb4ac;
 }
 
-.hero-panel-list {
+.terminal-lines {
   margin: 0;
-  padding-left: 18px;
+  display: grid;
+  gap: 10px;
 }
 
-.hero-panel-list li {
-  margin-bottom: 8px;
-  color: #31433e;
-  font-size: 15px;
+.terminal-lines p {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #d2e2dc;
+}
+
+.terminal-lines span {
+  color: #6fbf9f;
+  font-weight: 700;
+  margin-right: 6px;
 }
 
 .btn {
@@ -262,21 +275,21 @@ h1 {
   background: #f4f7f6;
 }
 
-.trust-bar {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  padding: 14px;
-  border-radius: var(--r-sm);
-  border: 1px solid var(--line);
-  background: var(--surface);
+.signal-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: var(--s-2);
 }
 
-.trust-item {
-  text-align: center;
+.signal-pill {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  padding: 8px 14px;
+  font-size: 13px;
   font-weight: 700;
-  color: #30453f;
+  color: #32453f;
 }
 
 h2 {
@@ -292,54 +305,77 @@ h3 {
   line-height: 1.25;
 }
 
-.grid {
+.feature-stack {
+  border-top: 1px solid var(--line);
+}
+
+.feature-item {
   display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
   gap: var(--s-2);
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
 }
 
-.grid-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.feature-index {
+  margin: 4px 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  color: #6f7f7a;
 }
 
-.grid-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.card,
-.doc-card {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid var(--line);
-  border-radius: var(--r-sm);
-  background: var(--surface);
-  padding: var(--s-3);
-  box-shadow: none;
-  transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-.card p,
-.doc-card p {
+.feature-item p {
   margin: 0;
   color: var(--text-muted);
   font-size: 16px;
 }
 
-.card:hover,
-.doc-card:hover {
-  border-color: #dde3df;
-  transform: none;
-  box-shadow: none;
+.usecase-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-2);
 }
 
-.doc-card {
+.usecase-item {
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: #fff;
+  padding: var(--s-3);
+}
+
+.usecase-item p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.link-list {
+  border-top: 1px solid var(--line);
+}
+
+.link-row {
   position: relative;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--s-2);
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+
+.link-row span:first-child {
+  font-weight: 700;
+  color: #19241f;
+}
+
+.link-row span:nth-child(2),
+.link-row span:nth-child(3) {
+  color: var(--text-muted);
+  font-size: 15px;
 }
 
 .doc-arrow {
-  position: absolute;
-  right: var(--s-3);
-  top: var(--s-3);
   font-weight: 800;
   color: #49645d;
 }
@@ -431,8 +467,17 @@ button:focus-visible {
     flex-wrap: wrap;
   }
 
-  .grid-3 {
+  .usecase-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .link-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .link-row span:nth-child(2),
+  .link-row span:nth-child(3) {
+    grid-column: 1 / 2;
   }
 }
 
@@ -447,10 +492,18 @@ button:focus-visible {
     padding: var(--s-3);
   }
 
-  .grid-3,
-  .grid-2,
-  .trust-bar {
+  .usecase-row {
     grid-template-columns: 1fr;
+  }
+
+  .feature-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .link-row {
+    grid-template-columns: 1fr auto;
+    align-items: start;
   }
 
   .hero-subline {

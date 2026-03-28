@@ -62,62 +62,82 @@
       <p class="cta-note" data-lang="zh">开源 · MIT 许可 · 面向真实工程工作流</p>
 
       <div class="hero-panel">
-        <h3 data-lang="en">What you get out of the box</h3>
-        <h3 data-lang="zh">开箱即用能力</h3>
-        <ul class="hero-panel-list" data-lang="en">
-          <li>Task planning and progress tracking</li>
-          <li>Filesystem + command execution</li>
-          <li>Sub-agent delegation workflows</li>
-          <li>Policy gates and sandbox controls</li>
-        </ul>
-        <ul class="hero-panel-list" data-lang="zh">
-          <li>任务规划与进度追踪</li>
-          <li>文件系统与命令执行能力</li>
-          <li>子代理委派工作流</li>
-          <li>策略门控与沙箱控制</li>
-        </ul>
+        <p class="panel-label" data-lang="en">Runtime Preview</p>
+        <p class="panel-label" data-lang="zh">运行时预览</p>
+        <div class="terminal-lines" data-lang="en">
+          <p><span>$</span> moss run --goal "Ship landing redesign"</p>
+          <p><span>→</span> planning tasks with write_todos</p>
+          <p><span>→</span> delegating via sub-agent tasks</p>
+          <p><span>→</span> applying policy + sandbox checks</p>
+          <p><span>✓</span> completed: production-ready output</p>
+        </div>
+        <div class="terminal-lines" data-lang="zh">
+          <p><span>$</span> moss run --goal "发布 landing 重设计"</p>
+          <p><span>→</span> 使用 write_todos 规划任务</p>
+          <p><span>→</span> 通过子代理并行执行</p>
+          <p><span>→</span> 应用策略与沙箱校验</p>
+          <p><span>✓</span> 完成：可交付结果输出</p>
+        </div>
       </div>
     </section>
 
-    <section class="trust-bar section">
-      <div class="trust-item">Open Source</div>
-      <div class="trust-item">Go-native</div>
-      <div class="trust-item">Extensible</div>
+    <section class="signal-row section" aria-label="Core signals">
+      <div class="signal-pill">Open Source</div>
+      <div class="signal-pill">Go-native Runtime</div>
+      <div class="signal-pill">Agent Harness First</div>
     </section>
 
     <section id="capabilities" class="section">
       <h2 data-lang="en">Capabilities</h2>
       <h2 data-lang="zh">能力矩阵</h2>
-      <div class="grid grid-3">
-        <article class="card">
-          <h3>Planning</h3>
-          <p data-lang="en">Task breakdown and progress-oriented agent workflows.</p>
-          <p data-lang="zh">支持任务拆分与进度驱动的 Agent 工作流。</p>
+      <div class="feature-stack">
+        <article class="feature-item">
+          <p class="feature-index">01</p>
+          <div>
+            <h3>Planning</h3>
+            <p data-lang="en">Task breakdown and progress-oriented agent workflows.</p>
+            <p data-lang="zh">支持任务拆分与进度驱动的 Agent 工作流。</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Filesystem + Exec</h3>
-          <p data-lang="en">Structured file operations and command execution with control boundaries.</p>
-          <p data-lang="zh">提供结构化文件操作与带边界控制的命令执行能力。</p>
+        <article class="feature-item">
+          <p class="feature-index">02</p>
+          <div>
+            <h3>Filesystem + Exec</h3>
+            <p data-lang="en">Structured file operations and command execution with control boundaries.</p>
+            <p data-lang="zh">提供结构化文件操作与带边界控制的命令执行能力。</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Sub-agents</h3>
-          <p data-lang="en">Delegate scoped tasks to specialized agents with isolated context.</p>
-          <p data-lang="zh">将子任务委派给专用代理并隔离上下文。</p>
+        <article class="feature-item">
+          <p class="feature-index">03</p>
+          <div>
+            <h3>Sub-agents</h3>
+            <p data-lang="en">Delegate scoped tasks to specialized agents with isolated context.</p>
+            <p data-lang="zh">将子任务委派给专用代理并隔离上下文。</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Policy + Sandbox</h3>
-          <p data-lang="en">Control risk through trust levels, approval gates, and runtime policy.</p>
-          <p data-lang="zh">通过信任等级、审批门控与运行时策略控制风险。</p>
+        <article class="feature-item">
+          <p class="feature-index">04</p>
+          <div>
+            <h3>Policy + Sandbox</h3>
+            <p data-lang="en">Control risk through trust levels, approval gates, and runtime policy.</p>
+            <p data-lang="zh">通过信任等级、审批门控与运行时策略控制风险。</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>TUI + Headless</h3>
-          <p data-lang="en">Run interactively for humans or headless for CI and automation.</p>
-          <p data-lang="zh">既可交互运行，也可在 CI/自动化场景无头执行。</p>
+        <article class="feature-item">
+          <p class="feature-index">05</p>
+          <div>
+            <h3>TUI + Headless</h3>
+            <p data-lang="en">Run interactively for humans or headless for CI and automation.</p>
+            <p data-lang="zh">既可交互运行，也可在 CI/自动化场景无头执行。</p>
+          </div>
         </article>
-        <article class="card">
-          <h3>Extension APIs</h3>
-          <p data-lang="en">Compose with middleware, tools, skills, and adapters.</p>
-          <p data-lang="zh">通过中间件、工具、技能与适配器自由扩展。</p>
+        <article class="feature-item">
+          <p class="feature-index">06</p>
+          <div>
+            <h3>Extension APIs</h3>
+            <p data-lang="en">Compose with middleware, tools, skills, and adapters.</p>
+            <p data-lang="zh">通过中间件、工具、技能与适配器自由扩展。</p>
+          </div>
         </article>
       </div>
     </section>
@@ -125,20 +145,20 @@
     <section id="use-cases" class="section">
       <h2 data-lang="en">Use Cases</h2>
       <h2 data-lang="zh">适用场景</h2>
-      <div class="grid grid-3">
-        <article class="card">
+      <div class="usecase-row">
+        <article class="usecase-item">
           <h3 data-lang="en">For Builders</h3>
           <h3 data-lang="zh">面向开发者</h3>
           <p data-lang="en">Ship useful agent workflows quickly with low setup overhead.</p>
           <p data-lang="zh">以更低配置成本快速交付可用 Agent 工作流。</p>
         </article>
-        <article class="card">
+        <article class="usecase-item">
           <h3 data-lang="en">For Leads</h3>
           <h3 data-lang="zh">面向技术负责人</h3>
           <p data-lang="en">Adopt clear runtime boundaries and maintainable extension points.</p>
           <p data-lang="zh">通过清晰运行时边界与扩展点提升可维护性。</p>
         </article>
-        <article class="card">
+        <article class="usecase-item">
           <h3 data-lang="en">For Teams</h3>
           <h3 data-lang="zh">面向企业团队</h3>
           <p data-lang="en">Use policy controls and sandboxing for safer engineering operations.</p>
@@ -158,30 +178,30 @@ moss run --goal "Fix the bug in main.go" --workspace .</code></pre>
 
     <section id="docs" class="section">
       <h2>Docs &amp; Examples</h2>
-      <div class="grid grid-2">
-        <a class="doc-card" href="https://github.com/mossagents/moss/tree/main/docs">
-          <h3>Documentation</h3>
-          <p data-lang="en">Architecture, getting started, and core runtime guides.</p>
-          <p data-lang="zh">架构、快速开始与核心运行时指南。</p>
-          <span class="doc-arrow">→</span>
+      <div class="link-list">
+        <a class="link-row" href="https://github.com/mossagents/moss/tree/main/docs">
+          <span>Documentation</span>
+          <span data-lang="en">Architecture, getting started, and runtime guides.</span>
+          <span data-lang="zh">架构、快速开始与运行时指南。</span>
+          <span class="doc-arrow">↗</span>
         </a>
-        <a class="doc-card" href="https://github.com/mossagents/moss/blob/main/README.md">
-          <h3>Repository README</h3>
-          <p data-lang="en">Project overview, capabilities, and integration entrypoint.</p>
-          <p data-lang="zh">项目总览、能力说明与集成入口。</p>
-          <span class="doc-arrow">→</span>
+        <a class="link-row" href="https://github.com/mossagents/moss/blob/main/README.md">
+          <span>Repository README</span>
+          <span data-lang="en">Project overview and integration entrypoint.</span>
+          <span data-lang="zh">项目总览与集成入口。</span>
+          <span class="doc-arrow">↗</span>
         </a>
-        <a class="doc-card" href="https://github.com/mossagents/moss/tree/main/examples/mosscode">
-          <h3>Example: mosscode</h3>
-          <p data-lang="en">Coding assistant reference implementation.</p>
-          <p data-lang="zh">代码助手参考实现。</p>
-          <span class="doc-arrow">→</span>
+        <a class="link-row" href="https://github.com/mossagents/moss/tree/main/examples/mosscode">
+          <span>Example: mosscode</span>
+          <span data-lang="en">Coding assistant reference implementation.</span>
+          <span data-lang="zh">代码助手参考实现。</span>
+          <span class="doc-arrow">↗</span>
         </a>
-        <a class="doc-card" href="https://github.com/mossagents/moss/tree/main/examples/mosswork">
-          <h3>Example: mosswork</h3>
-          <p data-lang="en">Multi-agent orchestration in practical workflows.</p>
-          <p data-lang="zh">多代理任务编排的工程实践示例。</p>
-          <span class="doc-arrow">→</span>
+        <a class="link-row" href="https://github.com/mossagents/moss/tree/main/examples/mosswork">
+          <span>Example: mosswork</span>
+          <span data-lang="en">Multi-agent orchestration in practical workflows.</span>
+          <span data-lang="zh">多代理任务编排的工程实践示例。</span>
+          <span class="doc-arrow">↗</span>
         </a>
       </div>
     </section>
