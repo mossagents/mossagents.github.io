@@ -14,138 +14,144 @@
   <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/268767877">
 </head>
 <body>
-<section class="hero section">
-  <div class="hero-top">
-    <a class="brand" href="/">
-      <img src="https://avatars.githubusercontent.com/u/268767877" alt="Moss logo" width="96" height="96">
-      <span>Moss</span>
-    </a>
-    <nav class="top-nav" aria-label="Primary">
-      <a href="#capabilities">Capabilities</a>
-      <a href="#use-cases">Use Cases</a>
-      <a href="#quickstart">Quickstart</a>
-      <a href="#docs">Docs</a>
-    </nav>
-    <div class="lang-switch" role="group" aria-label="Language switch">
-      <button type="button" data-lang-switch="en" aria-pressed="false">EN</button>
-      <button type="button" data-lang-switch="zh" aria-pressed="false">中文</button>
-    </div>
-  </div>
+  <main class="container">
+    <section class="hero section">
+      <div class="hero-bg"></div>
+      <div class="hero-top">
+        <a class="brand" href="/" aria-label="Moss home">
+          <img src="https://avatars.githubusercontent.com/u/268767877" alt="Moss logo" width="96" height="96">
+          <span>Moss</span>
+        </a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="#capabilities">Capabilities</a>
+          <a href="#use-cases">Use Cases</a>
+          <a href="#quickstart">Quickstart</a>
+          <a href="#docs">Docs</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button type="button" data-lang-switch="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang-switch="zh" aria-pressed="false">中文</button>
+        </div>
+      </div>
 
-  <h1 data-lang="en">Agent harness for Go: compose fast, run safely.</h1>
-  <h1 data-lang="zh">面向 Go 的 Agent Harness：快速装配，安全运行。</h1>
+      <p class="eyebrow" data-lang="en">Production-ready AI Agent Runtime</p>
+      <p class="eyebrow" data-lang="zh">面向生产的 AI Agent Runtime</p>
 
-  <p class="lead" data-lang="en">
-    Build production-ready AI agent workflows with a batteries-included runtime, policy controls, and extension-first architecture.
-  </p>
-  <p class="lead" data-lang="zh">
-    用开箱即用的运行时、策略控制与扩展优先架构，构建可落地的 AI Agent 工作流。
-  </p>
+      <h1 data-lang="en">Agent harness for Go.<br>Compose fast. Run safely.</h1>
+      <h1 data-lang="zh">面向 Go 的 Agent Harness。<br>快速装配，安全运行。</h1>
 
-  <div class="cta-row">
-    <a class="btn btn-primary" href="https://github.com/mossagents/moss">Explore on GitHub</a>
-    <a class="btn btn-secondary" href="https://github.com/mossagents/moss/tree/main/docs">Read Docs</a>
-  </div>
-</section>
+      <p class="lead" data-lang="en">
+        Build AI agent products with a batteries-included runtime, policy controls, and extension-first architecture for real engineering teams.
+      </p>
+      <p class="lead" data-lang="zh">
+        以开箱即用的运行时、策略控制与扩展优先架构，构建可落地的 AI Agent 产品与工程流程。
+      </p>
 
-<section class="trust-bar section">
-  <div class="trust-item">Open Source</div>
-  <div class="trust-item">Go-native</div>
-  <div class="trust-item">Extensible</div>
-</section>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/mossagents/moss">Explore on GitHub</a>
+        <a class="btn btn-secondary" href="https://github.com/mossagents/moss/tree/main/docs">Read Docs</a>
+      </div>
+    </section>
 
-<section id="capabilities" class="section">
-  <h2 data-lang="en">Capabilities</h2>
-  <h2 data-lang="zh">能力矩阵</h2>
-  <div class="grid grid-3">
-    <article class="card">
-      <h3>Planning</h3>
-      <p data-lang="en">Task breakdown and progress-oriented agent workflows.</p>
-      <p data-lang="zh">支持任务拆分与进度驱动的 Agent 工作流。</p>
-    </article>
-    <article class="card">
-      <h3>Filesystem + Exec</h3>
-      <p data-lang="en">Structured file operations and command execution.</p>
-      <p data-lang="zh">提供结构化文件操作与命令执行能力。</p>
-    </article>
-    <article class="card">
-      <h3>Sub-agents</h3>
-      <p data-lang="en">Delegate scoped tasks to specialized agents.</p>
-      <p data-lang="zh">将子任务委派给专用代理并隔离上下文。</p>
-    </article>
-    <article class="card">
-      <h3>Policy + Sandbox</h3>
-      <p data-lang="en">Control risk with trust levels and policy gates.</p>
-      <p data-lang="zh">通过信任等级与策略门控控制执行风险。</p>
-    </article>
-    <article class="card">
-      <h3>TUI + Headless</h3>
-      <p data-lang="en">Run interactively or in script-friendly mode.</p>
-      <p data-lang="zh">既可交互运行，也可脚本化无头执行。</p>
-    </article>
-    <article class="card">
-      <h3>Extension APIs</h3>
-      <p data-lang="en">Compose with middleware, tools, skills, and adapters.</p>
-      <p data-lang="zh">通过中间件、工具、技能与适配器自由扩展。</p>
-    </article>
-  </div>
-</section>
+    <section class="trust-bar section">
+      <div class="trust-item">Open Source</div>
+      <div class="trust-item">Go-native</div>
+      <div class="trust-item">Extensible</div>
+    </section>
 
-<section id="use-cases" class="section">
-  <h2 data-lang="en">Use Cases</h2>
-  <h2 data-lang="zh">适用场景</h2>
-  <div class="grid grid-3">
-    <article class="card">
-      <h3 data-lang="en">For Builders</h3>
-      <h3 data-lang="zh">面向开发者</h3>
-      <p data-lang="en">Ship fast with a ready-to-run agent stack and minimal setup.</p>
-      <p data-lang="zh">以最小配置快速启动并交付可用 Agent。</p>
-    </article>
-    <article class="card">
-      <h3 data-lang="en">For Leads</h3>
-      <h3 data-lang="zh">面向技术负责人</h3>
-      <p data-lang="en">Adopt clear runtime boundaries and maintainable extension points.</p>
-      <p data-lang="zh">通过清晰运行时边界与扩展点提升可维护性。</p>
-    </article>
-    <article class="card">
-      <h3 data-lang="en">For Teams</h3>
-      <h3 data-lang="zh">面向企业团队</h3>
-      <p data-lang="en">Use policy controls and sandboxing for safer engineering workflows.</p>
-      <p data-lang="zh">借助策略控制和沙箱机制建立更安全流程。</p>
-    </article>
-  </div>
-</section>
+    <section id="capabilities" class="section">
+      <h2 data-lang="en">Capabilities</h2>
+      <h2 data-lang="zh">能力矩阵</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Planning</h3>
+          <p data-lang="en">Task breakdown and progress-oriented agent workflows.</p>
+          <p data-lang="zh">支持任务拆分与进度驱动的 Agent 工作流。</p>
+        </article>
+        <article class="card">
+          <h3>Filesystem + Exec</h3>
+          <p data-lang="en">Structured file operations and command execution with control boundaries.</p>
+          <p data-lang="zh">提供结构化文件操作与带边界控制的命令执行能力。</p>
+        </article>
+        <article class="card">
+          <h3>Sub-agents</h3>
+          <p data-lang="en">Delegate scoped tasks to specialized agents with isolated context.</p>
+          <p data-lang="zh">将子任务委派给专用代理并隔离上下文。</p>
+        </article>
+        <article class="card">
+          <h3>Policy + Sandbox</h3>
+          <p data-lang="en">Control risk through trust levels, approval gates, and runtime policy.</p>
+          <p data-lang="zh">通过信任等级、审批门控与运行时策略控制风险。</p>
+        </article>
+        <article class="card">
+          <h3>TUI + Headless</h3>
+          <p data-lang="en">Run interactively for humans or headless for CI and automation.</p>
+          <p data-lang="zh">既可交互运行，也可在 CI/自动化场景无头执行。</p>
+        </article>
+        <article class="card">
+          <h3>Extension APIs</h3>
+          <p data-lang="en">Compose with middleware, tools, skills, and adapters.</p>
+          <p data-lang="zh">通过中间件、工具、技能与适配器自由扩展。</p>
+        </article>
+      </div>
+    </section>
 
-<section id="quickstart" class="section">
-  <h2>Quickstart</h2>
-  <pre><code>go install github.com/mossagents/moss/cmd/moss@latest
+    <section id="use-cases" class="section">
+      <h2 data-lang="en">Use Cases</h2>
+      <h2 data-lang="zh">适用场景</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3 data-lang="en">For Builders</h3>
+          <h3 data-lang="zh">面向开发者</h3>
+          <p data-lang="en">Ship useful agent workflows quickly with low setup overhead.</p>
+          <p data-lang="zh">以更低配置成本快速交付可用 Agent 工作流。</p>
+        </article>
+        <article class="card">
+          <h3 data-lang="en">For Leads</h3>
+          <h3 data-lang="zh">面向技术负责人</h3>
+          <p data-lang="en">Adopt clear runtime boundaries and maintainable extension points.</p>
+          <p data-lang="zh">通过清晰运行时边界与扩展点提升可维护性。</p>
+        </article>
+        <article class="card">
+          <h3 data-lang="en">For Teams</h3>
+          <h3 data-lang="zh">面向企业团队</h3>
+          <p data-lang="en">Use policy controls and sandboxing for safer engineering operations.</p>
+          <p data-lang="zh">借助策略控制和沙箱机制建立更安全的工程流程。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="quickstart" class="section">
+      <h2>Quickstart</h2>
+      <pre><code>go install github.com/mossagents/moss/cmd/moss@latest
 moss
 moss run --goal "Fix the bug in main.go" --workspace .</code></pre>
-  <p data-lang="en">Need integration details? Start from the docs entrypoint.</p>
-  <p data-lang="zh">需要集成细节？从文档入口继续。</p>
-</section>
+      <p data-lang="en">Need implementation details? Continue from the docs entrypoint.</p>
+      <p data-lang="zh">需要实现细节？从文档入口继续。</p>
+    </section>
 
-<section id="docs" class="section">
-  <h2>Docs &amp; Examples</h2>
-  <ul class="link-list">
-    <li><a href="https://github.com/mossagents/moss/tree/main/docs">Documentation</a></li>
-    <li><a href="https://github.com/mossagents/moss/blob/main/README.md">Repository README</a></li>
-    <li><a href="https://github.com/mossagents/moss/tree/main/examples/mosscode">Example: mosscode</a></li>
-    <li><a href="https://github.com/mossagents/moss/tree/main/examples/mosswork">Example: mosswork</a></li>
-  </ul>
-</section>
+    <section id="docs" class="section">
+      <h2>Docs &amp; Examples</h2>
+      <ul class="link-list">
+        <li><a href="https://github.com/mossagents/moss/tree/main/docs">Documentation</a></li>
+        <li><a href="https://github.com/mossagents/moss/blob/main/README.md">Repository README</a></li>
+        <li><a href="https://github.com/mossagents/moss/tree/main/examples/mosscode">Example: mosscode</a></li>
+        <li><a href="https://github.com/mossagents/moss/tree/main/examples/mosswork">Example: mosswork</a></li>
+      </ul>
+    </section>
 
-<section class="final-cta section">
-  <h2 data-lang="en">Build your AI agent product on a reliable harness.</h2>
-  <h2 data-lang="zh">在可靠的 Agent Harness 上构建你的 AI 产品。</h2>
-  <a class="btn btn-primary" href="https://github.com/mossagents/moss">Explore on GitHub</a>
-</section>
+    <section class="final-cta section">
+      <h2 data-lang="en">Build your AI agent product on a reliable harness.</h2>
+      <h2 data-lang="zh">在可靠的 Agent Harness 上构建你的 AI 产品。</h2>
+      <a class="btn btn-primary" href="https://github.com/mossagents/moss">Explore on GitHub</a>
+    </section>
+  </main>
 
-<aside class="mobile-cta" data-mobile-cta hidden>
-  <a class="btn btn-primary" href="https://github.com/mossagents/moss">Explore on GitHub</a>
-  <button type="button" class="mobile-cta-dismiss" data-mobile-cta-dismiss aria-label="Dismiss">x</button>
-</aside>
+  <aside class="mobile-cta" data-mobile-cta hidden>
+    <a class="btn btn-primary" href="https://github.com/mossagents/moss">Explore on GitHub</a>
+    <button type="button" class="mobile-cta-dismiss" data-mobile-cta-dismiss aria-label="Dismiss">x</button>
+  </aside>
 
-<script src="/assets/js/site.js"></script>
+  <script src="/assets/js/site.js"></script>
 </body>
 </html>
