@@ -4,15 +4,6 @@
   var STORAGE_KEY = "moss_lang";
   var warnedMissingNodes = false;
 
-  function preferredDisplay(node) {
-    var tag = node.tagName;
-    if (tag === "SPAN" || tag === "A" || tag === "BUTTON" || tag === "STRONG" || tag === "EM") return "inline";
-    if (tag === "LI") return "list-item";
-    if (tag === "TR") return "table-row";
-    if (tag === "TD" || tag === "TH") return "table-cell";
-    return "block";
-  }
-
   function resolveInitialLanguage(navigatorLanguage) {
     return (navigatorLanguage || "").toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
   }
@@ -51,10 +42,12 @@
     }
 
     enNodes.forEach(function (node) {
-      node.style.display = target === "en" ? preferredDisplay(node) : "none";
+      node.hidden = target !== "en";
+      node.removeAttribute("style");
     });
     zhNodes.forEach(function (node) {
-      node.style.display = target === "zh" ? preferredDisplay(node) : "none";
+      node.hidden = target !== "zh";
+      node.removeAttribute("style");
     });
 
     document.querySelectorAll("[data-lang-switch]").forEach(function (btn) {

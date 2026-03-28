@@ -330,8 +330,8 @@ pre {
   display: none;
 }
 
-[data-lang="zh"] {
-  display: none;
+[data-lang][hidden] {
+  display: none !important;
 }
 
 a:focus-visible,
