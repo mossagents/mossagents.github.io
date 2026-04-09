@@ -246,7 +246,8 @@ code {
 
 .hero h1,
 .section-heading h2,
-.cta-panel h2 {
+.cta-panel h2,
+.cta-panel h3 {
   margin: 0;
   letter-spacing: -0.05em;
   line-height: 1.05;
