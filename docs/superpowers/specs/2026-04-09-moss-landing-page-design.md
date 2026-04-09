@@ -1,0 +1,156 @@
+# Moss GitHub Pages Landing Page Design
+
+## Summary
+
+This design defines an English-first, architecture-led landing page for the `mossagents.github.io` GitHub Pages site. The page should serve a mixed audience while clearly prioritizing engineering teams evaluating Moss as a Go agent runtime. The page will be built with Jekyll as a single-page site composed from reusable includes, optimized for GitHub Pages compatibility and static hosting simplicity.
+
+## Goals
+
+- Present Moss as a credible, production-minded agent harness for Go.
+- Distinguish the three core product surfaces: runtime, core apps, and examples.
+- Make the GitHub repository the most prominent call to action.
+- Give technical evaluators enough architectural signal to understand why Moss is different.
+- Keep the implementation maintainable, modular, and lightweight inside a Jekyll site.
+
+## Non-goals
+
+- Turning the site into a multi-page marketing application.
+- Leading with a docs-index experience.
+- Over-rotating into app-demo storytelling at the expense of the runtime narrative.
+- Adding fragile client-side behavior that is required for core understanding.
+
+## Audience
+
+Primary audience:
+
+- Engineering teams evaluating Moss as a reusable Go agent runtime.
+
+Secondary audiences:
+
+- Developers who want to try the existing `mosscode` app surface.
+- Readers comparing the architecture, capability model, and documentation before adoption.
+
+## Messaging direction
+
+The page should feel like an open-source infrastructure product with product-grade polish. Messaging should be concise and technical rather than hype-heavy. The narrative should move from:
+
+1. What Moss is.
+2. Why its architecture matters.
+3. How to adopt it.
+
+## Information architecture
+
+The landing page should flow in this order:
+
+1. Hero
+   - Strong positioning around Moss as an agent harness for Go.
+   - One-sentence support copy clarifying library-first runtime plus apps/examples.
+   - Primary CTA: View on GitHub.
+   - Secondary CTA: read documentation or getting started.
+2. Proof strip
+   - Compact proof points such as library-first runtime, safe execution posture, runtime assembly, apps and examples, MCP/skills/subagents, production-minded primitives.
+3. Product surfaces
+   - Three clear cards or columns:
+     - Build with the runtime.
+     - Ship with core apps.
+     - Learn from runnable examples.
+4. Architecture/value section
+   - Explain the layered model: minimal kernel, runtime assembly, appkit, deepagent preset, apps/examples.
+5. Capability grid
+   - Trust and approval, workspace isolation, checkpointing, memory, planning, MCP, prompt skills, subagents, governance-oriented runtime features.
+6. Getting started split
+   - One lane for running `mosscode`.
+   - One lane for embedding Moss as a Go library.
+7. Apps and examples showcase
+   - Featured cards for `mosscode`, `mosswork`, `mossresearch`, `mosswriter`, and selected focused examples.
+8. Docs and final CTA
+   - Key documentation entry points and a final GitHub CTA block.
+
+## Visual direction
+
+The visual language should be bright, clean, and engineering-oriented.
+
+- Base: off-white and pale gray backgrounds with white surfaces.
+- Text: deep slate for headings and body copy.
+- Accent: moss green as the signature accent, with restrained cyan for technical emphasis.
+- Composition: wide grid, generous whitespace, thin borders, subtle shadows, and crisp section framing.
+- Motifs: architecture framing, capability cards, runtime labels, and command snippets instead of decorative illustrations.
+- Tone: more modern developer-product clarity than dark infrastructure dashboard styling.
+
+The page should feel serious and polished without becoming visually heavy.
+
+## UX and content principles
+
+- The first scroll should establish credibility fast.
+- The page should explain runtime/apps/examples in plain language before going deep.
+- Commands, file paths, and product names may use monospace styling where helpful.
+- Technical depth should be visible, but content density should remain scannable.
+- Every major section should reinforce the primary adoption path back to GitHub.
+
+## Jekyll implementation shape
+
+Implement the site as a single landing page with reusable include partials.
+
+Recommended structure:
+
+- `_layouts\default.html`
+- `_includes\hero.html`
+- `_includes\proof-strip.html`
+- `_includes\surface-cards.html`
+- `_includes\architecture-section.html`
+- `_includes\capabilities.html`
+- `_includes\quickstart.html`
+- `_includes\apps-showcase.html`
+- `_includes\docs-cta.html`
+- `assets\css\site.css`
+- `index.md` or `index.html`
+
+Content that is likely to change should live in `_config.yml` or `_data\*.yml` rather than being duplicated in templates.
+
+## Content model
+
+Store configurable content in structured form where it improves maintainability:
+
+- Hero headline, subhead, and CTA URLs.
+- Proof-strip labels.
+- Product-surface summaries.
+- Featured capability items.
+- Featured apps/examples metadata.
+- Documentation link lists.
+
+This keeps the page easy to refresh as the Moss repository evolves.
+
+## Responsiveness
+
+- Desktop: multi-column composition with strong hierarchy.
+- Tablet: reduce columns and preserve section ordering.
+- Mobile: stack content cleanly, keep CTAs visible, and avoid compressed code blocks.
+
+The site should remain legible and visually deliberate at every breakpoint.
+
+## Accessibility and resilience
+
+- Semantic heading hierarchy.
+- Sufficient contrast in both body text and accent usage.
+- Visible keyboard focus states.
+- Link text that remains understandable out of context.
+- No JavaScript required for core reading or navigation.
+- Layouts should degrade gracefully if content lists change.
+
+## Acceptance criteria
+
+The finished page should:
+
+- Clearly state what Moss is within the hero section.
+- Differentiate runtime, core apps, and examples without ambiguity.
+- Provide a credible architecture story rooted in the actual repository structure.
+- Make GitHub the dominant primary CTA.
+- Feel polished and professional while remaining lightweight and static.
+- Stay compatible with GitHub Pages and standard Jekyll workflows.
+
+## Implementation notes
+
+- Favor static HTML/CSS composition over dynamic behavior.
+- Use code-adjacent visuals and structured cards instead of generic AI-themed graphics.
+- Keep CSS tokens centralized for spacing, color, borders, and elevation.
+- Avoid unsupported GitHub Pages plugin dependencies.
