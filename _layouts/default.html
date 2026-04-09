@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  </head>
+  <body>
+    {% assign landing = site.data.landing %}
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="#top" aria-label="{{ landing.brand.name }} home">
+            <span class="brand__name">{{ landing.brand.name }}</span>
+            <span class="brand__mark">{{ landing.brand.mark }}</span>
+          </a>
+          <nav class="site-nav" aria-label="Primary">
+            {% for item in landing.navigation %}
+              <a href="{{ item.href }}">{{ item.label }}</a>
+            {% endfor %}
+          </nav>
+          <a class="button button--small" href="{{ landing.brand.repository_url }}">GitHub</a>
+        </div>
+      </header>
+
+      <main id="main-content">
+        {{ content }}
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div>
+            <p class="footer-title">{{ landing.brand.name }}</p>
+            <p class="footer-copy">Library-first runtime, core apps, and runnable examples for agent systems in Go.</p>
+          </div>
+          <div class="footer-links">
+            <a href="{{ landing.brand.repository_url }}">Repository</a>
+            <a href="https://github.com/mossagents/moss/blob/main/README.md">README</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

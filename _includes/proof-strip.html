@@ -1,0 +1,14 @@
+{% assign strip = site.data.landing.proof_strip %}
+<section class="section section--tight">
+  <div class="container">
+    <h2 class="sr-only">Proof points</h2>
+    <div class="proof-strip">
+      {% for item in strip %}
+        <article class="proof-card">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

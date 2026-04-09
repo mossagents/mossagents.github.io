@@ -1,0 +1,25 @@
+{% assign quickstart = site.data.landing.quickstart %}
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">{{ quickstart.section_label }}</p>
+      <h2>{{ quickstart.title }}</h2>
+      <p>{{ quickstart.description }}</p>
+    </div>
+    <div class="lane-grid">
+      {% for lane in quickstart.lanes %}
+        <article class="lane-card">
+          <h3>{{ lane.title }}</h3>
+          <p>{{ lane.summary }}</p>
+          <pre><code class="language-{{ lane.language | default: 'text' }}">{{ lane.snippet | escape }}</code></pre>
+          <ul>
+            {% for bullet in lane.bullets %}
+              <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+          <a class="text-link" href="{{ lane.cta_url }}">{{ lane.cta_label }}</a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

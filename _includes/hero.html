@@ -1,0 +1,31 @@
+{% assign hero = site.data.landing.hero %}
+<section id="top" class="section section--hero">
+  <div class="container hero">
+    <div class="hero__content">
+      <p class="eyebrow">{{ hero.eyebrow }}</p>
+      <h1>{{ hero.title }}</h1>
+      <p class="hero__lead">{{ hero.description }}</p>
+      <div class="hero__actions">
+        <a class="button button--primary" href="{{ hero.primary_cta.url }}">{{ hero.primary_cta.label }}</a>
+        <a class="button button--ghost" href="{{ hero.secondary_cta.url }}">{{ hero.secondary_cta.label }}</a>
+      </div>
+      <ul class="hero__notes" aria-label="Product notes">
+        {% for note in hero.notes %}
+          <li>{{ note }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="hero__panels">
+      {% for panel in hero.panels %}
+        <article class="code-panel">
+          <p class="code-panel__label">{{ panel.label }}</p>
+          <h3>{{ panel.title }}</h3>
+          <p>{{ panel.body }}</p>
+          <pre><code class="language-{{ panel.language | default: 'text' }}">{{ panel.snippet | escape }}</code></pre>
+          <p class="code-panel__footer">{{ panel.footer }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+{% assign docs = site.data.landing.docs %}
+<section id="docs" class="section section--docs">
+  <div class="container docs-layout">
+    <div class="docs-list">
+      <div class="section-heading section-heading--compact">
+        <p class="eyebrow">{{ docs.section_label }}</p>
+        <h2>{{ docs.title }}</h2>
+        <p>{{ docs.description }}</p>
+      </div>
+      <div class="doc-links">
+        {% for link in docs.links %}
+          <a class="doc-link" href="{{ link.href }}">
+            <span class="doc-link__title">{{ link.title }}</span>
+            <span class="doc-link__note">{{ link.note }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <aside class="cta-panel">
+      <p class="eyebrow">Start here</p>
+      <h2>{{ docs.final_cta.title }}</h2>
+      <p>{{ docs.final_cta.text }}</p>
+      <div class="hero__actions hero__actions--stack">
+        <a class="button button--primary" href="{{ docs.final_cta.primary_url }}">{{ docs.final_cta.primary_label }}</a>
+        <a class="button button--ghost" href="{{ docs.final_cta.secondary_url }}">{{ docs.final_cta.secondary_label }}</a>
+      </div>
+    </aside>
+  </div>
+</section>

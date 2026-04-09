@@ -1,0 +1,212 @@
+brand:
+  name: Moss
+  mark: mossagents.github.io
+  repository_url: https://github.com/mossagents/moss
+
+navigation:
+  - label: Runtime
+    href: "#surfaces"
+  - label: Architecture
+    href: "#architecture"
+  - label: Capabilities
+    href: "#capabilities"
+  - label: Apps
+    href: "#apps"
+  - label: Docs
+    href: "#docs"
+
+hero:
+  eyebrow: Agent harness for Go
+  title: Compose fast. Ship safe. Build agent systems in Go.
+  description: Moss gives teams a minimal kernel, a configurable runtime assembly layer, and product-ready app surfaces for coding, research, and beyond.
+  primary_cta:
+    label: View on GitHub
+    url: https://github.com/mossagents/moss
+  secondary_cta:
+    label: Read the English README
+    url: https://github.com/mossagents/moss/blob/main/README.md
+  notes:
+    - Library-first runtime
+    - Core apps plus runnable examples
+    - Trust, approval, and workspace isolation
+  panels:
+    - label: Run the primary app
+      title: mosscode
+      body: The most complete interactive surface in the repo targets coding workflows and diagnostics.
+      language: shell
+      snippet: |
+        go run ./apps/mosscode --provider openai --model gpt-4o
+      footer: Interactive TUI, one-shot prompts, and doctor/debug flows.
+    - label: Embed Moss in Go
+      title: appkit.BuildKernel
+      body: Start from the reusable runtime, then extend into a full deep-agent product path.
+      language: go
+      snippet: |
+        k, err := appkit.BuildKernel(ctx, &appkit.AppFlags{
+          Provider: "openai",
+          Model:    "gpt-4o",
+          Workspace: ".",
+        }, intr.NewConsoleIO())
+      footer: Move to BuildKernelWithExtensions or presets/deepagent when you need more.
+
+proof_strip:
+  - title: Library-first runtime
+    text: Reusable kernel plus runtime assembly for real apps.
+  - title: Safe execution posture
+    text: Trust, approval, workspace isolation, and repo-aware tooling.
+  - title: Capability loading
+    text: Builtin tools, MCP, skills, and subagents in one runtime model.
+  - title: Product surfaces
+    text: apps/mosscode, apps/mosswork, and runnable reference examples.
+
+surfaces:
+  section_label: Product surfaces
+  title: One runtime, three clear ways to adopt Moss.
+  description: Start where you are today: embed the runtime, use the shipped app surfaces, or fork a focused example.
+  items:
+    - title: Build with the runtime
+      text: Use kernel, appkit, and the deepagent preset to compose agent workflows directly in Go.
+      href: https://github.com/mossagents/moss/blob/main/README.md
+      cta: Explore the runtime
+    - title: Ship with core apps
+      text: mosscode and mosswork show how the runtime becomes a real product surface with opinionated UX.
+      href: https://github.com/mossagents/moss/tree/main/apps/mosscode
+      cta: See core apps
+    - title: Learn from runnable examples
+      text: Research, writer, room, websocket, and custom-tool examples map common integration patterns.
+      href: https://github.com/mossagents/moss/tree/main/examples
+      cta: Browse examples
+
+architecture:
+  section_label: Architecture
+  title: Keep the kernel minimal. Assemble the runtime above it.
+  description: Moss separates stable runtime primitives from capability loading and product assembly, so teams can start small and scale up without rewriting the foundation.
+  layers:
+    - name: Core runtime
+      detail: kernel
+      text: Sessions, tools, middleware, model adapters, observation, checkpointing, and execution primitives.
+    - name: Runtime assembly
+      detail: appkit/runtime
+      text: Default capability loading for builtin tools, MCP servers, prompt skills, subagents, context, memory, and scheduling.
+    - name: Builder APIs
+      detail: appkit
+      text: BuildKernel and BuildKernelWithExtensions create the shortest path from flags to a usable kernel.
+    - name: Product preset
+      detail: presets/deepagent
+      text: Product-grade composition for coding, research, and writer-style apps with persistence and collaboration primitives.
+    - name: Apps and examples
+      detail: apps/* and examples/*
+      text: Real product surfaces and reference implementations that prove the runtime in concrete workflows.
+
+capabilities:
+  section_label: Capabilities
+  title: Production-minded building blocks for agent systems.
+  description: The runtime is opinionated about execution boundaries, extensibility, and operational clarity.
+  items:
+    - title: Trust and approval
+      text: Control whether project-level assets load and how execution asks for confirmation.
+    - title: Workspace isolation
+      text: Work with repo-aware execution surfaces, patch application, and rollback-friendly flows.
+    - title: Builtin tools
+      text: Read, edit, search, execute commands, make HTTP calls, and ask users for structured input.
+    - title: MCP and external providers
+      text: Bridge external capability providers through config-driven MCP loading.
+    - title: Prompt skills and subagents
+      text: Inject domain guidance and controlled delegated agents without collapsing boundaries.
+    - title: Session persistence
+      text: Sessions, checkpoints, task runtime, and memory primitives support longer-lived workflows.
+    - title: Planning and context management
+      text: Offload, compact, and coordinate work without forcing a single monolithic prompt.
+    - title: Apps plus reference patterns
+      text: Move from reusable primitives to opinionated product surfaces without changing the core model.
+
+quickstart:
+  section_label: Getting started
+  title: Choose the fastest path in.
+  description: Run the primary product surface or embed the runtime in your own Go application.
+  lanes:
+    - title: Run mosscode
+      summary: Start from the most complete interactive surface in the repository.
+      language: shell
+      snippet: |
+        go run ./apps/mosscode
+      bullets:
+        - Interactive TUI for coding tasks
+        - One-shot prompts and diagnostics
+        - Separate app directory under ~/.mosscode
+      cta_label: Open mosscode
+      cta_url: https://github.com/mossagents/moss/tree/main/apps/mosscode
+    - title: Embed as a Go library
+      summary: Build on the runtime directly when you want your own product surface.
+      language: go
+      snippet: |
+        import "github.com/mossagents/moss/appkit"
+
+        k, err := appkit.BuildKernel(ctx, flags, io)
+      bullets:
+        - Start with BuildKernel
+        - Extend with BuildKernelWithExtensions
+        - Move to presets/deepagent for fuller products
+      cta_label: Read the runtime docs
+      cta_url: https://github.com/mossagents/moss/blob/main/README.md
+
+apps:
+  section_label: Apps and examples
+  title: See how Moss shows up in real surfaces.
+  description: Core apps prove the product layer. Examples show focused integration patterns that teams can adapt quickly.
+  items:
+    - name: mosscode
+      type: Core app
+      text: Coding-agent surface with TUI, review flows, checkpoints, and governance-oriented runtime wiring.
+      href: https://github.com/mossagents/moss/tree/main/apps/mosscode
+    - name: mosswork
+      type: Core app
+      text: Desktop collaboration assistant built on the same runtime foundation.
+      href: https://github.com/mossagents/moss/tree/main/apps/mosswork
+    - name: mossresearch
+      type: Example
+      text: Deep research orchestration and evidence-oriented workflows.
+      href: https://github.com/mossagents/moss/tree/main/examples/mossresearch
+    - name: mosswriter
+      type: Example
+      text: Content and writing workflows that lean on delegated agents and repeatable structures.
+      href: https://github.com/mossagents/moss/tree/main/examples/mosswriter
+    - name: mossclaw
+      type: Example
+      text: Assistant, gateway, scheduling, and knowledge composition in one reference surface.
+      href: https://github.com/mossagents/moss/tree/main/examples/mossclaw
+    - name: custom-tool
+      type: Example
+      text: Focused reference for extending the runtime with your own tools.
+      href: https://github.com/mossagents/moss/tree/main/examples/custom-tool
+
+docs:
+  section_label: Docs
+  title: Follow the architecture, then go deeper.
+  description: Keep the entry point English-first and make language boundaries explicit for deeper repository docs.
+  links:
+    - title: README
+      note: English
+      href: https://github.com/mossagents/moss/blob/main/README.md
+    - title: README_ZH
+      note: Chinese
+      href: https://github.com/mossagents/moss/blob/main/README_ZH.md
+    - title: Getting Started
+      note: Chinese
+      href: https://github.com/mossagents/moss/blob/main/docs/getting-started.md
+    - title: Architecture
+      note: Chinese
+      href: https://github.com/mossagents/moss/blob/main/docs/architecture.md
+    - title: Skills
+      note: Chinese
+      href: https://github.com/mossagents/moss/blob/main/docs/skills.md
+    - title: Roadmap
+      note: Chinese
+      href: https://github.com/mossagents/moss/blob/main/docs/roadmap.md
+  final_cta:
+    title: Build on the runtime. Start from the apps. Fork the examples.
+    text: Moss is organized so teams can move from a reusable kernel to product-grade agent systems without losing architectural clarity.
+    primary_label: View the repository
+    primary_url: https://github.com/mossagents/moss
+    secondary_label: Read the English README
+    secondary_url: https://github.com/mossagents/moss/blob/main/README.md

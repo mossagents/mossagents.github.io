@@ -1,0 +1,18 @@
+{% assign capabilities = site.data.landing.capabilities %}
+<section id="capabilities" class="section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">{{ capabilities.section_label }}</p>
+      <h2>{{ capabilities.title }}</h2>
+      <p>{{ capabilities.description }}</p>
+    </div>
+    <div class="capability-grid">
+      {% for item in capabilities.items %}
+        <article class="capability-card">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

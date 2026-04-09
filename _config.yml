@@ -1,0 +1,6 @@
+title: Moss
+description: Agent harness for Go. Compose fast, run safely.
+markdown: kramdown
+permalink: pretty
+exclude:
+  - README.md
