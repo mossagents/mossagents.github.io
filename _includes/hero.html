@@ -15,9 +15,9 @@
         </div>
       </div>
 
-      <aside class="hero-summary">
+      <section class="hero-summary" aria-labelledby="hero-summary-title">
         <p class="eyebrow">{{ hero.summary.eyebrow }}</p>
-        <h2>{{ hero.summary.title }}</h2>
+        <p id="hero-summary-title" class="hero-summary__title">{{ hero.summary.title }}</p>
         <p class="hero-summary__lead">{{ hero.summary.text }}</p>
         <div class="hero-summary__points">
           {% for point in hero.summary.points %}
@@ -31,7 +31,7 @@
           <p class="summary-snippet__label">{{ hero.summary.snippet_label }}</p>
           <pre class="snippet"><code class="language-{{ hero.summary.snippet_language | default: 'text' }}">{{ hero.summary.snippet | escape }}</code></pre>
         </div>
-      </aside>
+      </section>
     </div>
   </div>
 </section>

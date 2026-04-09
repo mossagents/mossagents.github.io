@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -80,6 +81,7 @@ code {
 
 .section {
   padding: 5.5rem 0;
+  scroll-margin-top: 6rem;
 }
 
 .section--hero {
@@ -230,7 +232,7 @@ code {
 
 .section-heading h2,
 .hero-grid h1,
-.hero-summary h2,
+.hero-summary__title,
 .final-cta h2 {
   margin: 0;
   letter-spacing: -0.05em;
@@ -313,6 +315,10 @@ code {
 
 .hero-summary__lead {
   margin: 0;
+}
+
+.hero-summary__title {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
 }
 
 .hero-summary__points {
@@ -544,6 +550,19 @@ button:focus-visible {
 }
 
 @media (max-width: 1080px) {
+  .site-header__inner {
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: auto;
+    padding: 0.9rem 0;
+  }
+
+  .site-nav {
+    order: 3;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+  }
+
   .hero-grid,
   .docs-faq-grid,
   .final-cta {

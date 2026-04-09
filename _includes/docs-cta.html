@@ -1,8 +1,8 @@
 {% assign docs = site.data.landing.docs %}
 {% assign faq = site.data.landing.faq %}
-<section id="docs" class="section">
+<div class="section">
   <div class="container docs-faq-grid">
-    <section class="docs-panel" aria-labelledby="docs-heading">
+    <section id="docs" class="docs-panel" aria-labelledby="docs-heading">
       <div class="section-heading section-heading--compact">
         <p class="eyebrow">{{ docs.section_label }}</p>
         <h2 id="docs-heading">{{ docs.title }}</h2>
@@ -34,4 +34,4 @@
       </div>
     </section>
   </div>
-</section>
+</div>
