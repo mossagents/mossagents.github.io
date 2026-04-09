@@ -1,5 +1,5 @@
-title: Moss
-description: Composable agent runtime, app surfaces, and examples for Go teams.
+title: MOSS Agents
+description: Agentic Harness for runtime-first agent systems in Go.
 markdown: kramdown
 permalink: pretty
 exclude:

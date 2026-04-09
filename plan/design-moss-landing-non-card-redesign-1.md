@@ -4,13 +4,13 @@ version: 1.0
 date_created: 2026-04-09
 last_updated: 2026-04-09
 owner: Copilot
-status: Planned
+status: Completed
 tags: [design, refactor, jekyll, github-pages, landing-page, non-card, full-bleed]
 ---
 
 # Introduction
 
-![Status: Planned](https://img.shields.io/badge/status-Planned-blue)
+![Status: Completed](https://img.shields.io/badge/status-Completed-brightgreen)
 
 This plan defines the implementation work required to replace the current card-heavy Moss homepage with the approved non-card redesign documented in `docs/superpowers/specs/2026-04-09-moss-landing-non-card-redesign-design.md`. The implementation must preserve Moss-specific runtime, apps, examples, docs, and FAQ coverage while replacing floating panels and rounded white blocks with a flatter full-bleed section-band system that remains compatible with Jekyll and GitHub Pages.
 
@@ -42,10 +42,10 @@ This plan defines the implementation work required to replace the current card-h
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-001 | Rewrite `D:\Codes\qiulin\mossagents.github.io\_data\landing.yml` so the homepage data model explicitly supports restrained hero copy, flat pillar matrix items, horizontal adoption steps, runtime architecture rows, row-based product surfaces, flat docs links, flat FAQ items, and final CTA band content. Remove data keys or nested structures that only exist to power independent panel/card renderers. |  |  |
-| TASK-002 | Update `D:\Codes\qiulin\mossagents.github.io\index.html` so the rendered section order remains `hero -> pillars -> adoption -> architecture -> surfaces -> docs/faq -> final CTA`, but each include is treated as a page band rather than a card container. |  |  |
-| TASK-003 | Review `D:\Codes\qiulin\mossagents.github.io\_layouts\default.html` and keep only the shell logic that still fits the flatter layout system. Preserve `brand`, primary navigation, GitHub header CTA, sticky-header behavior, and footer links while removing any need for card-like framing in shared chrome. |  |  |
-| TASK-004 | Update `D:\Codes\qiulin\mossagents.github.io\_config.yml` only if needed so internal planning/spec files remain excluded from GitHub Pages output during the redesign implementation. |  |  |
+| TASK-001 | Rewrite `D:\Codes\qiulin\mossagents.github.io\_data\landing.yml` so the homepage data model explicitly supports restrained hero copy, flat pillar matrix items, horizontal adoption steps, runtime architecture rows, row-based product surfaces, flat docs links, flat FAQ items, and final CTA band content. Remove data keys or nested structures that only exist to power independent panel/card renderers. | ✅ | 2026-04-09 |
+| TASK-002 | Update `D:\Codes\qiulin\mossagents.github.io\index.html` so the rendered section order remains `hero -> pillars -> adoption -> architecture -> surfaces -> docs/faq -> final CTA`, but each include is treated as a page band rather than a card container. | ✅ | 2026-04-09 |
+| TASK-003 | Review `D:\Codes\qiulin\mossagents.github.io\_layouts\default.html` and keep only the shell logic that still fits the flatter layout system. Preserve `brand`, primary navigation, GitHub header CTA, sticky-header behavior, and footer links while removing any need for card-like framing in shared chrome. | ✅ | 2026-04-09 |
+| TASK-004 | Update `D:\Codes\qiulin\mossagents.github.io\_config.yml` only if needed so internal planning/spec files remain excluded from GitHub Pages output during the redesign implementation. | ✅ | 2026-04-09 |
 
 ### Implementation Phase 2
 
@@ -53,13 +53,13 @@ This plan defines the implementation work required to replace the current card-h
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-005 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\hero.html` into a restrained hero intro with short runtime-first headline, concise supporting text, GitHub/README CTAs, and no paired panel or summary-card treatment. If a supporting technical object is retained, it must belong to the hero band without reading as a separate card. |  |  |
-| TASK-006 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\capabilities.html` so technical pillars render as a flat 4-6 item matrix with numbering, dividers, short titles, and concise copy, without per-item panel containers. |  |  |
-| TASK-007 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\quickstart.html` so adoption flow renders as a three-step horizontal process band with explicit sequence and repository path cues, not as independent step cards. |  |  |
-| TASK-008 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\architecture-section.html` so the runtime architecture becomes a full-width dark technical band with five distinct rows for `kernel`, `appkit/runtime`, `appkit`, `presets`, and `apps/examples`. Each row must expose label, detail, and explanation in a row-based map rather than boxed explanatory modules. |  |  |
-| TASK-009 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\apps-showcase.html` so product surfaces render as a flat product index using rows or grid rows for `mosscode`, `mosswork`, `mossresearch`, and `mosswriter`, with name, type, explanation, and destination link visible without showcase-card framing. |  |  |
-| TASK-010 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\docs-cta.html` so docs and FAQ render as flat knowledge lists under top-level sections `#docs` and `#faq`, without boxed side-by-side panels. Preserve explicit language labels and direct FAQ framing. |  |  |
-| TASK-011 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\final-cta.html` so the final CTA becomes a closing emphasis band rather than a standalone promotional card. |  |  |
+| TASK-005 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\hero.html` into a restrained hero intro with short runtime-first headline, concise supporting text, GitHub/README CTAs, and no paired panel or summary-card treatment. If a supporting technical object is retained, it must belong to the hero band without reading as a separate card. | ✅ | 2026-04-09 |
+| TASK-006 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\capabilities.html` so technical pillars render as a flat 4-6 item matrix with numbering, dividers, short titles, and concise copy, without per-item panel containers. | ✅ | 2026-04-09 |
+| TASK-007 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\quickstart.html` so adoption flow renders as a three-step horizontal process band with explicit sequence and repository path cues, not as independent step cards. | ✅ | 2026-04-09 |
+| TASK-008 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\architecture-section.html` so the runtime architecture becomes a full-width dark technical band with five distinct rows for `kernel`, `appkit/runtime`, `appkit`, `presets`, and `apps/examples`. Each row must expose label, detail, and explanation in a row-based map rather than boxed explanatory modules. | ✅ | 2026-04-09 |
+| TASK-009 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\apps-showcase.html` so product surfaces render as a flat product index using rows or grid rows for `mosscode`, `mosswork`, `mossresearch`, and `mosswriter`, with name, type, explanation, and destination link visible without showcase-card framing. | ✅ | 2026-04-09 |
+| TASK-010 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\docs-cta.html` so docs and FAQ render as flat knowledge lists under top-level sections `#docs` and `#faq`, without boxed side-by-side panels. Preserve explicit language labels and direct FAQ framing. | ✅ | 2026-04-09 |
+| TASK-011 | Rebuild `D:\Codes\qiulin\mossagents.github.io\_includes\final-cta.html` so the final CTA becomes a closing emphasis band rather than a standalone promotional card. | ✅ | 2026-04-09 |
 
 ### Implementation Phase 3
 
@@ -67,9 +67,9 @@ This plan defines the implementation work required to replace the current card-h
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-012 | Rewrite `D:\Codes\qiulin\mossagents.github.io\assets\css\site.css` so the dominant visual primitives are section bands, tone shifts, dividers, row layouts, numbering, and typography hierarchy. Remove or neutralize selectors whose primary purpose is rounded white panel rendering, shadow-led separation, showcase-tile layout, or paired hero-card framing. |  |  |
-| TASK-013 | Ensure the header, hero, pillars, adoption flow, architecture band, surfaces index, docs area, FAQ area, and final CTA all read as parts of one page system rather than isolated modules. Use spacing, lines, and background transitions instead of card chrome to establish hierarchy. |  |  |
-| TASK-014 | Define responsive behavior in `D:\Codes\qiulin\mossagents.github.io\assets\css\site.css` so tablet and mobile layouts collapse into flat vertical lists/rows rather than stacked boxed tiles. Preserve anchor offset behavior for sticky-header navigation and keep top-level section starts visible on fragment navigation. |  |  |
+| TASK-012 | Rewrite `D:\Codes\qiulin\mossagents.github.io\assets\css\site.css` so the dominant visual primitives are section bands, tone shifts, dividers, row layouts, numbering, and typography hierarchy. Remove or neutralize selectors whose primary purpose is rounded white panel rendering, shadow-led separation, showcase-tile layout, or paired hero-card framing. | ✅ | 2026-04-09 |
+| TASK-013 | Ensure the header, hero, pillars, adoption flow, architecture band, surfaces index, docs area, FAQ area, and final CTA all read as parts of one page system rather than isolated modules. Use spacing, lines, and background transitions instead of card chrome to establish hierarchy. | ✅ | 2026-04-09 |
+| TASK-014 | Define responsive behavior in `D:\Codes\qiulin\mossagents.github.io\assets\css\site.css` so tablet and mobile layouts collapse into flat vertical lists/rows rather than stacked boxed tiles. Preserve anchor offset behavior for sticky-header navigation and keep top-level section starts visible on fragment navigation. | ✅ | 2026-04-09 |
 
 ### Implementation Phase 4
 
@@ -77,11 +77,11 @@ This plan defines the implementation work required to replace the current card-h
 
 | Task | Description | Completed | Date |
 |------|-------------|-----------|------|
-| TASK-015 | Verify the hero no longer reads as a large card or paired-panel layout, and that the strongest structural content begins below the fold. |  |  |
-| TASK-016 | Verify technical pillars, adoption flow, product surfaces, docs, FAQ, and final CTA no longer depend on floating cards, rounded white panels, or independent showcase tiles as their dominant structure. |  |  |
-| TASK-017 | Verify the product-surface coverage includes `mosscode`, `mosswork`, `mossresearch`, and `mosswriter`, and that runtime architecture exposes all five required rows. |  |  |
-| TASK-018 | Verify non-English documentation links remain explicitly labeled `Chinese`, top-level navigation targets remain semantic sections, and sticky-header fragment navigation does not obscure section headings. |  |  |
-| TASK-019 | If a local Jekyll toolchain is available, run a local site build in `D:\Codes\qiulin\mossagents.github.io`; otherwise validate by reviewing Liquid references, YAML parsing, repository diff, and GitHub Pages Actions after push. |  |  |
+| TASK-015 | Verify the hero no longer reads as a large card or paired-panel layout, and that the strongest structural content begins below the fold. | ✅ | 2026-04-09 |
+| TASK-016 | Verify technical pillars, adoption flow, product surfaces, docs, FAQ, and final CTA no longer depend on floating cards, rounded white panels, or independent showcase tiles as their dominant structure. | ✅ | 2026-04-09 |
+| TASK-017 | Verify the product-surface coverage includes `mosscode`, `mosswork`, `mossresearch`, and `mosswriter`, and that runtime architecture exposes all five required rows. | ✅ | 2026-04-09 |
+| TASK-018 | Verify non-English documentation links remain explicitly labeled `Chinese`, top-level navigation targets remain semantic sections, and sticky-header fragment navigation does not obscure section headings. | ✅ | 2026-04-09 |
+| TASK-019 | If a local Jekyll toolchain is available, run a local site build in `D:\Codes\qiulin\mossagents.github.io`; otherwise validate by reviewing Liquid references, YAML parsing, repository diff, and GitHub Pages Actions after push. | ✅ | 2026-04-09 |
 
 ## 3. Alternatives
 

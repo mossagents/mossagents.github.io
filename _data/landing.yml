@@ -1,6 +1,6 @@
 brand:
-  name: Moss
-  mark: mossagents.github.io
+  name: MOSS Agents
+  mark: moss.deeploop.dev
   repository_url: https://github.com/mossagents/moss
 
 header_cta:
@@ -8,32 +8,32 @@ header_cta:
   url: https://github.com/mossagents/moss
 
 navigation:
-  - label: Pillars
+  - label: Overview
     href: "#pillars"
-  - label: Adoption
+  - label: Workflow
     href: "#adoption"
   - label: Architecture
     href: "#architecture"
-  - label: Surfaces
+  - label: Ecosystem
     href: "#surfaces"
   - label: FAQ
     href: "#faq"
 
 hero:
-  eyebrow: Open-source runtime for agent systems in Go
-  title: Build agent products on a runtime that stays composable.
-  description: Moss gives engineering teams a reusable kernel, runtime assembly, and ready-to-run app surfaces for coding, research, and workflow products in Go.
+  eyebrow: Agentic Harness for Go teams
+  title: Build agent systems on an explicit Agentic Harness.
+  description: MOSS Agents gives engineering teams a runtime-first harness with a reusable kernel, structured runtime assembly, and ready-to-run surfaces for coding, research, and workflow products in Go.
   primary_cta:
     label: View on GitHub
     url: https://github.com/mossagents/moss
   secondary_cta:
-    label: Read the English README
+    label: Read the README
     url: https://github.com/mossagents/moss/blob/main/README.md
 
 technical_pillars:
-  section_label: Technical pillars
-  title: Runtime boundaries first. Product surfaces second.
-  description: Moss is structured so teams can evaluate and extend each layer without inheriting one monolithic agent stack.
+  section_label: Overview
+  title: Runtime boundaries first. Harness surfaces second.
+  description: MOSS Agents is structured so teams can evaluate and extend each layer of the Agentic Harness without inheriting one monolithic agent stack.
   items:
     - title: Composable runtime foundation
       text: The kernel keeps core runtime primitives small, reusable, and easier to reason about.
@@ -49,9 +49,9 @@ technical_pillars:
       text: Teams can start from shipped surfaces, then move inward to appkit or presets as they need deeper control.
 
 adoption_steps:
-  section_label: Adoption flow
-  title: Start with a surface, then open the runtime.
-  description: Moss is designed so evaluation can begin from something runnable and become more composable as your team goes deeper.
+  section_label: Workflow
+  title: Start with a surface, then open the harness.
+  description: MOSS Agents is designed so evaluation can begin from something runnable and become more composable as your team goes deeper into the harness.
   steps:
     - number: "01"
       title: Run a real surface
@@ -74,9 +74,9 @@ adoption_steps:
 
 runtime_architecture:
   section_label: Runtime architecture
-  title: A small kernel beneath a broader runtime system.
-  description: Moss keeps stable runtime primitives in kernel, moves default capability loading into appkit/runtime, and leaves product assembly to appkit, presets, apps, and examples.
-  summary: The repository is easiest to understand as layered runtime assembly. Kernel remains minimal, runtime adds default capability loading, appkit and presets shape product paths, and apps/examples prove how those layers are used.
+  title: A small kernel beneath a broader Agentic Harness.
+  description: MOSS Agents keeps stable runtime primitives in kernel, moves default capability loading into appkit/runtime, and leaves product assembly to appkit, presets, apps, and examples.
+  summary: The repository is easiest to understand as a layered Agentic Harness. Kernel remains minimal, runtime adds default capability loading, appkit and presets shape product paths, and apps/examples prove how those layers are used.
   layers:
     - label: Core runtime
       detail: kernel
@@ -95,9 +95,9 @@ runtime_architecture:
       text: Core apps and reference implementations show what the runtime looks like in working product surfaces.
 
 product_surfaces:
-  section_label: Product surfaces
+  section_label: Ecosystem
   title: Evaluate the shipped surfaces and runnable patterns.
-  description: Moss is not only a runtime API. The repository also exposes app surfaces and examples that show how the runtime is assembled in practice.
+  description: MOSS Agents is not only a runtime API. The repository also exposes app surfaces and examples that show how the Agentic Harness is assembled in practice.
   items:
     - name: mosscode
       type: Core app
@@ -147,26 +147,27 @@ docs:
 faq:
   section_label: FAQ
   title: Questions engineers ask before they commit.
-  description: The homepage should answer the framing questions quickly so readers know how to evaluate Moss.
+  description: The homepage should answer the framing questions quickly so readers know how to evaluate MOSS Agents.
   items:
-    - question: What is Moss today?
-      answer: Moss is a library-first agent runtime for Go with a reusable kernel, a configurable runtime assembly layer, core app surfaces under apps, and runnable examples under examples.
-    - question: Who is Moss for?
-      answer: Moss is aimed at engineering teams that want clearer runtime boundaries, extensibility, and a path from reusable runtime code into real agent products.
+    - question: What is MOSS Agents today?
+      answer: MOSS Agents is a library-first Agentic Harness for Go with a reusable kernel, a configurable runtime assembly layer, core app surfaces under apps, and runnable examples under examples.
+    - question: Who is MOSS Agents for?
+      answer: MOSS Agents is aimed at engineering teams that want clearer runtime boundaries, extensibility, and a path from reusable runtime code into real agent products.
     - question: How does the runtime relate to apps and examples?
-      answer: The runtime layers sit underneath the app surfaces. apps and examples are concrete entry points that prove how kernel, appkit, runtime loading, and presets show up in working products.
+      answer: The runtime layers sit underneath the app surfaces. apps and examples are concrete entry points that prove how kernel, appkit, runtime loading, and presets show up in a working Agentic Harness.
 
 final_cta:
   eyebrow: Start with the repository
-  title: Evaluate the runtime. Run a surface. Extend when it makes sense.
-  text: Moss is organized so teams can move from a minimal runtime foundation to deeper product surfaces without rewriting the whole system.
+  title: Evaluate the harness. Run a surface. Extend when it makes sense.
+  text: MOSS Agents is organized so teams can move from a minimal runtime foundation to deeper product surfaces without rewriting the whole system.
   primary_label: View the repository
   primary_url: https://github.com/mossagents/moss
-  secondary_label: Read the English README
+  secondary_label: Read the README
   secondary_url: https://github.com/mossagents/moss/blob/main/README.md
 
 footer:
-  description: Library-first runtime, runtime assembly, app surfaces, and runnable examples for agent systems in Go.
+  description: Agentic Harness, runtime assembly, app surfaces, and runnable examples for agent systems in Go.
+  copyright: Copyright © DeepLoop Labs.
   links:
     - label: Repository
       href: https://github.com/mossagents/moss
