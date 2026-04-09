@@ -106,7 +106,7 @@ The homepage should follow this structure:
 4. **Runtime architecture**
    - the strongest section on the page
    - full-width dark technical band
-   - row-based layer explanation for:
+   - row-based layer explanation with five distinct rows for:
      - kernel
      - appkit/runtime
      - appkit
@@ -123,7 +123,8 @@ The homepage should follow this structure:
    - must include:
      - `mosscode`
      - `mosswork`
-     - at least two examples
+     - `mossresearch`
+     - `mosswriter`
 
 6. **Docs and FAQ**
    - a quiet lower-page knowledge area
@@ -217,6 +218,7 @@ This section should feel quiet and useful.
 - Preserve visible keyboard focus states.
 - Ensure anchor navigation works with the sticky header.
 - Keep mobile collapse clean without turning sections into stacked cards.
+- On mobile, sections should collapse into flat vertical lists and rows, not isolated boxed tiles.
 - Use semantic sections for top-level navigation targets.
 
 ## Data and implementation guidance
@@ -227,7 +229,8 @@ This section should feel quiet and useful.
 - Keep explicit `Chinese` labels on non-English documentation links.
 - Existing section order may remain broadly similar, but section internals should be rebuilt around the new flat band system.
 - `_data/landing.yml` may be rewritten again if needed to better support row-based and band-based rendering.
-- Existing includes may be replaced if their current responsibilities are too tied to card-era layout assumptions.
+- `hero.html`, `capabilities.html`, `quickstart.html`, `apps-showcase.html`, `docs-cta.html`, and `final-cta.html` should be treated as likely rebuild candidates rather than lightly extended templates.
+- `architecture-section.html` and `_layouts/default.html` may be extended if their structural roles still fit the flat band system.
 
 ## Spec precedence
 
