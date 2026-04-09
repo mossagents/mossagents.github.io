@@ -1,6 +1,7 @@
 brand:
   name: MOSS Agents
-  mark: moss.deeploop.dev
+  home_url: https://moss.deeploop.dev
+  logo_url: https://avatars.githubusercontent.com/u/268767877
   repository_url: https://github.com/mossagents/moss
 
 header_cta:
