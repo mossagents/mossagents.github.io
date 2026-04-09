@@ -66,6 +66,40 @@ The new page should be a **technical product page**:
 - more product-shaped than a documentation homepage
 - more technical and grounded than a startup marketing page
 
+## Spec precedence and inheritance
+
+This redesign supersedes the current landing-page presentation direction, but not every prior constraint.
+
+### Superseded
+
+This spec replaces earlier landing-page decisions about:
+
+- section order
+- visual direction
+- current homepage information architecture
+- the current editorial-shell section treatment
+
+### Inherited
+
+The following requirements remain in force from prior landing-page work unless explicitly changed here:
+
+- English-first publishing
+- GitHub repository as the dominant primary CTA
+- explicit language labeling for non-English documentation links
+- Jekyll and GitHub Pages compatibility
+- accessible heading structure, focus visibility, and responsive collapse behavior
+
+### Base contracts that remain
+
+The site should still preserve persistent layout/data contracts for:
+
+- `brand`
+- `navigation`
+- header CTA
+- footer links
+
+These may be restyled, but they should remain present in the data model and layout.
+
 ## Information architecture
 
 The new homepage should follow this structure:
@@ -94,13 +128,18 @@ The new homepage should follow this structure:
 5. **Product surfaces**
    - a section explicitly describing core apps and example entry points
    - these should feel like current ways to use or evaluate Moss, not like an afterthought catalog
+   - this section must include:
+     - `mosscode`
+     - `mosswork`
+     - at least two runnable examples
 
 6. **Docs and FAQ**
    - a clean docs area plus a short FAQ that answers key framing questions
-   - examples:
+   - the FAQ is required, not optional
+   - required FAQ topics:
      - what Moss is
-     - who it is for
-     - how runtime relates to apps/examples
+     - who Moss is for
+     - how the runtime relates to apps and examples
 
 7. **Final CTA**
    - close with GitHub-first conversion and one secondary docs/readme path
@@ -175,6 +214,8 @@ The copy should not:
 - The redesign should remain a single-page Jekyll site.
 - `index.html` can keep the single-page entry model, but section composition should be reorganized to match the new information architecture.
 - `_data/landing.yml` should be rewritten to fit the new page structure:
+  - brand
+  - navigation
   - hero
   - technical pillars
   - adoption steps
@@ -183,8 +224,15 @@ The copy should not:
   - docs
   - faq
   - final CTA
+  - footer
 - Current include boundaries may be changed or replaced where needed.
 - The implementation should prefer a cleaner section/grid system over trying to patch the current layout incrementally.
+
+### Content source expectations
+
+- Runtime/platform claims should be grounded in the Moss repository README and current documentation.
+- App and example coverage should come from the current `apps/` and `examples/` surfaces in the repository.
+- The spec should remain portable as a repository document; implementation plans should reference repository-relative content sources rather than depending on absolute local paths as the source of truth.
 
 ## Accessibility and resilience
 
@@ -202,6 +250,7 @@ The redesign is complete when:
 - the hero presents Moss as runtime-first with supporting platform/app-surface context
 - the copy has been rewritten instead of lightly edited
 - the page contains technical pillars, adoption flow, architecture, product surfaces, and FAQ sections
+- the page retains brand/navigation/header/footer data contracts in the Jekyll data model
 - GitHub remains the dominant CTA
 - the resulting page still feels specific to Moss and does not read like a Skyline copy-paste
 - the site remains compatible with standard Jekyll/GitHub Pages behavior
