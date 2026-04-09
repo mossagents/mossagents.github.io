@@ -6,9 +6,9 @@
       <h2>{{ capabilities.title }}</h2>
       <p>{{ capabilities.description }}</p>
     </div>
-    <div class="capability-grid">
+    <div class="capability-list">
       {% for item in capabilities.items %}
-        <article class="capability-card">
+        <article class="capability-item">
           <h3>{{ item.title }}</h3>
           <p>{{ item.text }}</p>
         </article>

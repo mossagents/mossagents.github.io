@@ -8,10 +8,10 @@
     </div>
     <div class="layer-stack">
       {% for layer in architecture.layers %}
-        <article class="layer-card">
-          <div class="layer-card__meta">{{ layer.detail }}</div>
-          <h3>{{ layer.name }}</h3>
-          <p>{{ layer.text }}</p>
+        <article class="layer-row">
+          <h3 class="layer-row__name">{{ layer.name }}</h3>
+          <p class="layer-row__detail"><code>{{ layer.detail }}</code></p>
+          <p class="layer-row__text">{{ layer.text }}</p>
         </article>
       {% endfor %}
     </div>

@@ -6,13 +6,13 @@
       <h2>{{ quickstart.title }}</h2>
       <p>{{ quickstart.description }}</p>
     </div>
-    <div class="lane-grid">
+    <div class="quickstart-grid">
       {% for lane in quickstart.lanes %}
-        <article class="lane-card">
+        <article class="quickstart-lane">
           <h3>{{ lane.title }}</h3>
           <p>{{ lane.summary }}</p>
-          <pre><code class="language-{{ lane.language | default: 'text' }}">{{ lane.snippet | escape }}</code></pre>
-          <ul>
+          <pre class="snippet"><code class="language-{{ lane.language | default: 'text' }}">{{ lane.snippet | escape }}</code></pre>
+          <ul class="quickstart-list">
             {% for bullet in lane.bullets %}
               <li>{{ bullet }}</li>
             {% endfor %}
