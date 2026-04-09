@@ -105,11 +105,15 @@ product_surfaces:
       text: The most complete coding-oriented product surface in the repository and the packaged moss CLI target.
       href: https://github.com/mossagents/moss/tree/main/apps/mosscode
       link_label: Explore mosscode
+      image: /assets/images/mosscode-ui.png
+      image_alt: MossCode terminal interface screenshot
     - name: mosswork
       type: Core app
       text: Desktop collaboration surface built on the same runtime foundation and product assembly model.
       href: https://github.com/mossagents/moss/tree/main/apps/mosswork
       link_label: Explore mosswork
+      image: /assets/images/mosswork-ui.png
+      image_alt: MossWork desktop workspace screenshot
     - name: mossresearch
       type: Example
       text: Research-oriented orchestration path that demonstrates evidence gathering and deeper delegated workflows.

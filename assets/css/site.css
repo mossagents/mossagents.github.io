@@ -451,7 +451,7 @@ section[id] {
 .surface-row {
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.7rem;
   padding: 1.6rem 0;
   border-bottom: 1px solid var(--line);
 }
@@ -471,6 +471,17 @@ section[id] {
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.surface-row__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 1px solid var(--line);
+  background: #0f0f0f;
+  margin-bottom: 0.15rem;
 }
 
 .surface-row__name {

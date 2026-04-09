@@ -9,6 +9,9 @@
     <div class="surface-index">
       {% for item in surfaces.items %}
         <div class="surface-row">
+          {% if item.image %}
+            <img class="surface-row__image" src="{{ item.image }}" alt="{{ item.image_alt }}">
+          {% endif %}
           <span class="surface-row__type">{{ item.type }}</span>
           <h3 class="surface-row__name">{{ item.name }}</h3>
           <p class="surface-row__text">{{ item.text }}</p>
