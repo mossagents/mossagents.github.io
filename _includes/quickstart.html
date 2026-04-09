@@ -6,15 +6,17 @@
       <h2>{{ flow.title }}</h2>
       <p>{{ flow.description }}</p>
     </div>
-    <div class="steps-grid">
+    <div class="steps-band">
       {% for step in flow.steps %}
-        <article class="step-card">
-          <p class="step-card__number">{{ step.number }}</p>
-          <h3>{{ step.title }}</h3>
-          <p>{{ step.text }}</p>
-          <p class="step-card__meta">{{ step.meta }}</p>
+        <div class="step-row">
+          <div class="step-row__head">
+            <span class="step-row__num">{{ step.number }}</span>
+            <h3>{{ step.title }}</h3>
+          </div>
+          <p class="step-row__text">{{ step.text }}</p>
+          <p class="step-row__meta">{{ step.meta }}</p>
           <a class="text-link" href="{{ step.link_url }}">{{ step.link_label }}</a>
-        </article>
+        </div>
       {% endfor %}
     </div>
   </div>

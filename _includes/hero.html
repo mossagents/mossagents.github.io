@@ -1,37 +1,12 @@
 {% assign hero = site.data.landing.hero %}
 <section id="top" class="section section--hero">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">{{ hero.eyebrow }}</p>
-        <h1>{{ hero.title }}</h1>
-        <p class="hero__lead">{{ hero.description }}</p>
-        <div class="hero__actions">
-          <a class="button button--primary" href="{{ hero.primary_cta.url }}">{{ hero.primary_cta.label }}</a>
-          <a class="button button--ghost" href="{{ hero.secondary_cta.url }}">{{ hero.secondary_cta.label }}</a>
-        </div>
-        <div class="hero-caption">
-          <p>{{ hero.caption }}</p>
-        </div>
-      </div>
-
-      <section class="hero-summary" aria-labelledby="hero-summary-title">
-        <p class="eyebrow">{{ hero.summary.eyebrow }}</p>
-        <p id="hero-summary-title" class="hero-summary__title">{{ hero.summary.title }}</p>
-        <p class="hero-summary__lead">{{ hero.summary.text }}</p>
-        <div class="hero-summary__points">
-          {% for point in hero.summary.points %}
-            <article class="summary-point">
-              <h3>{{ point.title }}</h3>
-              <p>{{ point.text }}</p>
-            </article>
-          {% endfor %}
-        </div>
-        <div class="summary-snippet">
-          <p class="summary-snippet__label">{{ hero.summary.snippet_label }}</p>
-          <pre class="snippet"><code class="language-{{ hero.summary.snippet_language | default: 'text' }}">{{ hero.summary.snippet | escape }}</code></pre>
-        </div>
-      </section>
+    <p class="eyebrow">{{ hero.eyebrow }}</p>
+    <h1 class="hero__title">{{ hero.title }}</h1>
+    <p class="hero__lead">{{ hero.description }}</p>
+    <div class="hero__actions">
+      <a class="button button--primary" href="{{ hero.primary_cta.url }}">{{ hero.primary_cta.label }}</a>
+      <a class="button button--ghost" href="{{ hero.secondary_cta.url }}">{{ hero.secondary_cta.label }}</a>
     </div>
   </div>
 </section>

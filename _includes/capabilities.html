@@ -6,12 +6,15 @@
       <h2>{{ pillars.title }}</h2>
       <p>{{ pillars.description }}</p>
     </div>
-    <div class="pillar-grid">
+    <div class="pillar-matrix">
       {% for item in pillars.items %}
-        <article class="pillar-card">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.text }}</p>
-        </article>
+        <div class="pillar-row">
+          <span class="pillar-row__num">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</span>
+          <div class="pillar-row__body">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+          </div>
+        </div>
       {% endfor %}
     </div>
   </div>

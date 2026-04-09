@@ -1,24 +1,27 @@
 {% assign docs = site.data.landing.docs %}
 {% assign faq = site.data.landing.faq %}
-<div class="section">
-  <div class="container docs-faq-grid">
-    <section id="docs" class="docs-panel" aria-labelledby="docs-heading">
+<div class="section section--soft">
+  <div class="container">
+
+    <section id="docs" class="knowledge-section" aria-labelledby="docs-heading">
       <div class="section-heading section-heading--compact">
         <p class="eyebrow">{{ docs.section_label }}</p>
         <h2 id="docs-heading">{{ docs.title }}</h2>
         <p>{{ docs.description }}</p>
       </div>
-      <div class="docs-links">
+      <div class="docs-list">
         {% for link in docs.links %}
-          <a class="docs-link" href="{{ link.href }}">
-            <span class="docs-link__title">{{ link.title }}</span>
-            <span class="docs-link__note">{{ link.note }}</span>
+          <a class="docs-entry" href="{{ link.href }}">
+            <span class="docs-entry__title">{{ link.title }}</span>
+            <span class="docs-entry__note">{{ link.note }}</span>
           </a>
         {% endfor %}
       </div>
     </section>
 
-    <section id="faq" class="faq-panel" aria-labelledby="faq-heading">
+    <div class="section-divider" role="separator"></div>
+
+    <section id="faq" class="knowledge-section" aria-labelledby="faq-heading">
       <div class="section-heading section-heading--compact">
         <p class="eyebrow">{{ faq.section_label }}</p>
         <h2 id="faq-heading">{{ faq.title }}</h2>
@@ -26,12 +29,13 @@
       </div>
       <div class="faq-list">
         {% for item in faq.items %}
-          <article class="faq-item">
+          <div class="faq-entry">
             <h3>{{ item.question }}</h3>
             <p>{{ item.answer }}</p>
-          </article>
+          </div>
         {% endfor %}
       </div>
     </section>
+
   </div>
 </div>

@@ -6,19 +6,15 @@
       <h2>{{ architecture.title }}</h2>
       <p>{{ architecture.description }}</p>
     </div>
-    <div class="architecture-shell">
-      <div class="architecture-summary">
-        <p>{{ architecture.summary }}</p>
-      </div>
-      <div class="layer-stack">
+    <p class="architecture-summary">{{ architecture.summary }}</p>
+    <div class="layer-stack">
       {% for layer in architecture.layers %}
-        <article class="layer-row">
-          <h3 class="layer-row__name">{{ layer.label }}</h3>
+        <div class="layer-row">
+          <h3 class="layer-row__label">{{ layer.label }}</h3>
           <p class="layer-row__detail"><code>{{ layer.detail }}</code></p>
           <p class="layer-row__text">{{ layer.text }}</p>
-        </article>
+        </div>
       {% endfor %}
-      </div>
     </div>
   </div>
 </section>

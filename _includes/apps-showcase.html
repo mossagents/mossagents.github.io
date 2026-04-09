@@ -1,21 +1,19 @@
 {% assign surfaces = site.data.landing.product_surfaces %}
-<section id="surfaces" class="section section--soft">
+<section id="surfaces" class="section">
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">{{ surfaces.section_label }}</p>
       <h2>{{ surfaces.title }}</h2>
       <p>{{ surfaces.description }}</p>
     </div>
-    <div class="surface-catalog">
+    <div class="surface-index">
       {% for item in surfaces.items %}
-        <article class="surface-card">
-          <span class="tag">{{ item.type }}</span>
-          <div class="surface-card__body">
-            <h3>{{ item.name }}</h3>
-            <p>{{ item.text }}</p>
-          </div>
+        <div class="surface-row">
+          <span class="surface-row__type">{{ item.type }}</span>
+          <h3 class="surface-row__name">{{ item.name }}</h3>
+          <p class="surface-row__text">{{ item.text }}</p>
           <a class="text-link" href="{{ item.href }}">{{ item.link_label }}</a>
-        </article>
+        </div>
       {% endfor %}
     </div>
   </div>

@@ -29,22 +29,6 @@ hero:
   secondary_cta:
     label: Read the English README
     url: https://github.com/mossagents/moss/blob/main/README.md
-  caption: Library-first runtime, appkit assembly, product presets, and app surfaces all live in one repository, but they stay understandable as separate layers.
-  summary:
-    eyebrow: Runtime summary
-    title: Built from runtime layers that stay explicit.
-    text: Start with a minimal kernel, load capabilities through appkit/runtime, then move into presets and product surfaces only when the workflow demands it.
-    points:
-      - title: Reusable kernel
-        text: Sessions, tools, middleware, observation, and execution foundations stay in one small core.
-      - title: Capability loading
-        text: Builtin tools, MCP, skills, subagents, memory, and context are assembled above the kernel.
-      - title: Product path
-        text: appkit and presets open into core apps and runnable examples instead of hiding the runtime behind one opaque shell.
-    snippet_label: Run the primary surface
-    snippet_language: shell
-    snippet: |
-      go run ./apps/mosscode --provider openai --model gpt-4o
 
 technical_pillars:
   section_label: Technical pillars
