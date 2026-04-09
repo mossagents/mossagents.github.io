@@ -107,6 +107,21 @@ Recommended structure:
 
 Content that is likely to change should live in `_config.yml` or `_data\*.yml` rather than being duplicated in templates.
 
+### Include contracts
+
+| Include | Responsibility | Expected inputs |
+|---|---|---|
+| `hero.html` | Render headline, supporting copy, primary and secondary CTAs, and compact product framing. | Headline text, subhead text, primary CTA label/URL, secondary CTA label/URL, optional proof badges. |
+| `proof-strip.html` | Render short proof signals directly under the hero. | A list of 4-6 short labels with optional supporting text. |
+| `surface-cards.html` | Explain the three product surfaces. | Three items with title, summary, and destination link. |
+| `architecture-section.html` | Explain the runtime layering and why it matters. | Section label, heading, summary copy, and a list of architecture layers. |
+| `capabilities.html` | Render the capability grid. | A list of capabilities with title and one-sentence explanation. |
+| `quickstart.html` | Show the two adoption lanes. | One run path for `mosscode`, one embed path for Go library use, each with title, summary, and snippet. |
+| `apps-showcase.html` | Showcase core apps and selected examples. | A list of featured entries with name, type, short description, and link target. |
+| `docs-cta.html` | Render documentation links plus final conversion CTA. | Final CTA label/URL and a curated list of documentation links. |
+
+Each include should be understandable and testable as a single display unit. The layout file should only compose sections and shared page chrome, not hold section-specific content logic.
+
 ## Content model
 
 Store configurable content in structured form where it improves maintainability:
@@ -119,6 +134,36 @@ Store configurable content in structured form where it improves maintainability:
 - Documentation link lists.
 
 This keeps the page easy to refresh as the Moss repository evolves.
+
+### Canonical link targets
+
+Use repository-relative URLs that resolve correctly on GitHub Pages:
+
+- Primary CTA: `https://github.com/mossagents/moss`
+- Secondary docs CTA: `https://github.com/mossagents/moss/blob/main/README.md`
+- English README: `https://github.com/mossagents/moss/blob/main/README.md`
+- Chinese README: `https://github.com/mossagents/moss/blob/main/README_ZH.md`
+- Getting Started (Chinese): `https://github.com/mossagents/moss/blob/main/docs/getting-started.md`
+- Architecture (Chinese): `https://github.com/mossagents/moss/blob/main/docs/architecture.md`
+- Skills (Chinese): `https://github.com/mossagents/moss/blob/main/docs/skills.md`
+- Roadmap (Chinese): `https://github.com/mossagents/moss/blob/main/docs/roadmap.md`
+- `apps/mosscode`: `https://github.com/mossagents/moss/tree/main/apps/mosscode`
+- `apps/mosswork`: `https://github.com/mossagents/moss/tree/main/apps/mosswork`
+- `examples/mossresearch`: `https://github.com/mossagents/moss/tree/main/examples/mossresearch`
+- `examples/mosswriter`: `https://github.com/mossagents/moss/tree/main/examples/mosswriter`
+- `examples/mossclaw`: `https://github.com/mossagents/moss/tree/main/examples/mossclaw`
+- `examples/custom-tool`: `https://github.com/mossagents/moss/tree/main/examples/custom-tool`
+
+If the implementation prefers centralized data files, these URLs should be declared once and referenced by includes through data lookups rather than inline duplication.
+
+### Language-handling rule
+
+Because the landing page is English-first but the current repository contains a mix of English and Chinese documentation:
+
+- The hero-level documentation CTA should point to the English `README.md`.
+- Any link that resolves to Chinese-language documentation should be labeled explicitly with a `Chinese` marker in the UI.
+- The docs section may include Chinese-language deep links, but they should appear after the English README and should not visually outrank the primary GitHub CTA.
+- App and example links are language-neutral because they resolve to repository code paths.
 
 ## Responsiveness
 
@@ -136,6 +181,14 @@ The site should remain legible and visually deliberate at every breakpoint.
 - Link text that remains understandable out of context.
 - No JavaScript required for core reading or navigation.
 - Layouts should degrade gracefully if content lists change.
+
+### Fallback behavior
+
+- If the proof strip has fewer than four items, expand spacing and center the remaining items instead of leaving empty card shells.
+- If the featured apps/examples list is shorter than expected, render only available cards and keep the grid balanced without placeholders.
+- If a command snippet is too long for narrow viewports, allow horizontal scrolling within the snippet container rather than wrapping into unreadable fragments.
+- If descriptive copy becomes longer than planned, cards should grow vertically rather than clip text.
+- If any optional data block is omitted, the section should still render cleanly with remaining required fields.
 
 ## Acceptance criteria
 
