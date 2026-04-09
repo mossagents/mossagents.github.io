@@ -258,4 +258,4 @@ The redesign is complete when:
 ## Notes
 
 - This redesign supersedes the current visual direction, but does not invalidate the earlier architectural understanding of Moss itself.
-- Reuse product truths from `D:\Codes\qiulin\moss\README.md` and related docs, but rewrite how they are presented on the homepage.
+- Reuse product truths from the Moss repository README and related repository docs, but rewrite how they are presented on the homepage.
