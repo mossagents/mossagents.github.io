@@ -1,23 +1,19 @@
-{% assign quickstart = site.data.landing.quickstart %}
-<section class="section section--alt">
+{% assign flow = site.data.landing.adoption_steps %}
+<section id="adoption" class="section">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">{{ quickstart.section_label }}</p>
-      <h2>{{ quickstart.title }}</h2>
-      <p>{{ quickstart.description }}</p>
+      <p class="eyebrow">{{ flow.section_label }}</p>
+      <h2>{{ flow.title }}</h2>
+      <p>{{ flow.description }}</p>
     </div>
-    <div class="quickstart-grid">
-      {% for lane in quickstart.lanes %}
-        <article class="quickstart-lane">
-          <h3>{{ lane.title }}</h3>
-          <p>{{ lane.summary }}</p>
-          <pre class="snippet"><code class="language-{{ lane.language | default: 'text' }}">{{ lane.snippet | escape }}</code></pre>
-          <ul class="quickstart-list">
-            {% for bullet in lane.bullets %}
-              <li>{{ bullet }}</li>
-            {% endfor %}
-          </ul>
-          <a class="text-link" href="{{ lane.cta_url }}">{{ lane.cta_label }}</a>
+    <div class="steps-grid">
+      {% for step in flow.steps %}
+        <article class="step-card">
+          <p class="step-card__number">{{ step.number }}</p>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.text }}</p>
+          <p class="step-card__meta">{{ step.meta }}</p>
+          <a class="text-link" href="{{ step.link_url }}">{{ step.link_label }}</a>
         </article>
       {% endfor %}
     </div>

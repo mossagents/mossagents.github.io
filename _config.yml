@@ -1,5 +1,5 @@
 title: Moss
-description: Agent harness for Go. Compose fast, run safely.
+description: Composable agent runtime, app surfaces, and examples for Go teams.
 markdown: kramdown
 permalink: pretty
 exclude:

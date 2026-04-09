@@ -1,30 +1,37 @@
 {% assign docs = site.data.landing.docs %}
-<section id="docs" class="section section--docs">
-  <div class="container closing-band">
-    <div class="docs-list">
+{% assign faq = site.data.landing.faq %}
+<section id="docs" class="section">
+  <div class="container docs-faq-grid">
+    <section class="docs-panel" aria-labelledby="docs-heading">
       <div class="section-heading section-heading--compact">
         <p class="eyebrow">{{ docs.section_label }}</p>
-        <h2>{{ docs.title }}</h2>
+        <h2 id="docs-heading">{{ docs.title }}</h2>
         <p>{{ docs.description }}</p>
       </div>
-      <div class="doc-links">
+      <div class="docs-links">
         {% for link in docs.links %}
-          <a class="doc-link" href="{{ link.href }}">
-            <span class="doc-link__title">{{ link.title }}</span>
-            <span class="doc-link__note">{{ link.note }}</span>
+          <a class="docs-link" href="{{ link.href }}">
+            <span class="docs-link__title">{{ link.title }}</span>
+            <span class="docs-link__note">{{ link.note }}</span>
           </a>
         {% endfor %}
       </div>
-    </div>
+    </section>
 
-    <aside class="docs-cta">
-      <p class="eyebrow">Start here</p>
-      <h3>{{ docs.final_cta.title }}</h3>
-      <p>{{ docs.final_cta.text }}</p>
-      <div class="hero__actions hero__actions--stack">
-        <a class="button button--primary" href="{{ docs.final_cta.primary_url }}">{{ docs.final_cta.primary_label }}</a>
-        <a class="button button--ghost" href="{{ docs.final_cta.secondary_url }}">{{ docs.final_cta.secondary_label }}</a>
+    <section id="faq" class="faq-panel" aria-labelledby="faq-heading">
+      <div class="section-heading section-heading--compact">
+        <p class="eyebrow">{{ faq.section_label }}</p>
+        <h2 id="faq-heading">{{ faq.title }}</h2>
+        <p>{{ faq.description }}</p>
       </div>
-    </aside>
+      <div class="faq-list">
+        {% for item in faq.items %}
+          <article class="faq-item">
+            <h3>{{ item.question }}</h3>
+            <p>{{ item.answer }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
   </div>
 </section>

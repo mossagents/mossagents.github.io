@@ -1,19 +1,24 @@
-{% assign architecture = site.data.landing.architecture %}
-<section id="architecture" class="section section--alt">
+{% assign architecture = site.data.landing.runtime_architecture %}
+<section id="architecture" class="section section--dark">
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">{{ architecture.section_label }}</p>
       <h2>{{ architecture.title }}</h2>
       <p>{{ architecture.description }}</p>
     </div>
-    <div class="layer-stack">
+    <div class="architecture-shell">
+      <div class="architecture-summary">
+        <p>{{ architecture.summary }}</p>
+      </div>
+      <div class="layer-stack">
       {% for layer in architecture.layers %}
         <article class="layer-row">
-          <h3 class="layer-row__name">{{ layer.name }}</h3>
+          <h3 class="layer-row__name">{{ layer.label }}</h3>
           <p class="layer-row__detail"><code>{{ layer.detail }}</code></p>
           <p class="layer-row__text">{{ layer.text }}</p>
         </article>
       {% endfor %}
+      </div>
     </div>
   </div>
 </section>

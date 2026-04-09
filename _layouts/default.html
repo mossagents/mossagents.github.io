@@ -22,7 +22,7 @@
               <a href="{{ item.href }}">{{ item.label }}</a>
             {% endfor %}
           </nav>
-          <a class="button button--small" href="{{ landing.brand.repository_url }}">GitHub</a>
+          <a class="button button--small" href="{{ landing.header_cta.url }}">{{ landing.header_cta.label }}</a>
         </div>
       </header>
 
@@ -34,11 +34,12 @@
         <div class="container site-footer__inner">
           <div>
             <p class="footer-title">{{ landing.brand.name }}</p>
-            <p class="footer-copy">Library-first runtime, core apps, and runnable examples for agent systems in Go.</p>
+            <p class="footer-copy">{{ landing.footer.description }}</p>
           </div>
           <div class="footer-links">
-            <a href="{{ landing.brand.repository_url }}">Repository</a>
-            <a href="https://github.com/mossagents/moss/blob/main/README.md">README</a>
+            {% for link in landing.footer.links %}
+              <a href="{{ link.href }}">{{ link.label }}</a>
+            {% endfor %}
           </div>
         </div>
       </footer>

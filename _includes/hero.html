@@ -1,8 +1,8 @@
 {% assign hero = site.data.landing.hero %}
 <section id="top" class="section section--hero">
   <div class="container">
-    <div class="hero-shell">
-      <div class="hero-shell__main">
+    <div class="hero-grid">
+      <div class="hero-copy">
         <p class="eyebrow">{{ hero.eyebrow }}</p>
         <h1>{{ hero.title }}</h1>
         <p class="hero__lead">{{ hero.description }}</p>
@@ -10,29 +10,28 @@
           <a class="button button--primary" href="{{ hero.primary_cta.url }}">{{ hero.primary_cta.label }}</a>
           <a class="button button--ghost" href="{{ hero.secondary_cta.url }}">{{ hero.secondary_cta.label }}</a>
         </div>
-        <ul class="hero-signals" aria-label="Product notes">
-          {% for note in hero.notes %}
-            <li>{{ note }}</li>
-          {% endfor %}
-        </ul>
+        <div class="hero-caption">
+          <p>{{ hero.caption }}</p>
+        </div>
       </div>
 
-      <div class="hero-shell__rail">
-        <p class="eyebrow hero-shell__eyebrow">Runtime signals</p>
-        <div class="hero-proof-list">
-          {% for panel in hero.panels %}
-            <article class="hero-proof">
-              <div class="hero-proof__heading">
-                <p class="hero-proof__label">{{ panel.label }}</p>
-                <h3>{{ panel.title }}</h3>
-              </div>
-              <p class="hero-proof__body">{{ panel.body }}</p>
-              <pre class="snippet snippet--compact"><code class="language-{{ panel.language | default: 'text' }}">{{ panel.snippet | escape }}</code></pre>
-              <p class="hero-proof__footer">{{ panel.footer }}</p>
+      <aside class="hero-summary">
+        <p class="eyebrow">{{ hero.summary.eyebrow }}</p>
+        <h2>{{ hero.summary.title }}</h2>
+        <p class="hero-summary__lead">{{ hero.summary.text }}</p>
+        <div class="hero-summary__points">
+          {% for point in hero.summary.points %}
+            <article class="summary-point">
+              <h3>{{ point.title }}</h3>
+              <p>{{ point.text }}</p>
             </article>
           {% endfor %}
         </div>
-      </div>
+        <div class="summary-snippet">
+          <p class="summary-snippet__label">{{ hero.summary.snippet_label }}</p>
+          <pre class="snippet"><code class="language-{{ hero.summary.snippet_language | default: 'text' }}">{{ hero.summary.snippet | escape }}</code></pre>
+        </div>
+      </aside>
     </div>
   </div>
 </section>

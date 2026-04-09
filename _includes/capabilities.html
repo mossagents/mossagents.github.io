@@ -1,14 +1,14 @@
-{% assign capabilities = site.data.landing.capabilities %}
-<section id="capabilities" class="section">
+{% assign pillars = site.data.landing.technical_pillars %}
+<section id="pillars" class="section section--soft">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">{{ capabilities.section_label }}</p>
-      <h2>{{ capabilities.title }}</h2>
-      <p>{{ capabilities.description }}</p>
+      <p class="eyebrow">{{ pillars.section_label }}</p>
+      <h2>{{ pillars.title }}</h2>
+      <p>{{ pillars.description }}</p>
     </div>
-    <div class="capability-list">
-      {% for item in capabilities.items %}
-        <article class="capability-item">
+    <div class="pillar-grid">
+      {% for item in pillars.items %}
+        <article class="pillar-card">
           <h3>{{ item.title }}</h3>
           <p>{{ item.text }}</p>
         </article>
