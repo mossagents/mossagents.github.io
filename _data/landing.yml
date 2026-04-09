@@ -62,7 +62,7 @@ proof_strip:
 surfaces:
   section_label: Product surfaces
   title: One runtime, three clear ways to adopt Moss.
-  description: Start where you are today: embed the runtime, use the shipped app surfaces, or fork a focused example.
+  description: "Start where you are today: embed the runtime, use the shipped app surfaces, or fork a focused example."
   items:
     - title: Build with the runtime
       text: Use kernel, appkit, and the deepagent preset to compose agent workflows directly in Go.
